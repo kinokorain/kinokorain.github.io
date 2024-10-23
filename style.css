@@ -1,0 +1,328 @@
+/* Reset and base styles  */
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Links */
+
+a,
+a:link,
+a:visited {
+	text-decoration: none;
+	color: inherit;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Common */
+
+aside,
+nav,
+footer,
+header,
+section,
+main {
+	display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	font-size: inherit;
+	font-weight: inherit;
+}
+
+ul,
+ul li {
+	list-style: none;
+}
+
+img {
+	vertical-align: top;
+}
+
+img,
+svg {
+	max-width: 100%;
+	height: auto;
+}
+
+address {
+	font-style: normal;
+}
+
+/* Form */
+
+input,
+textarea,
+button,
+select {
+	font-family: inherit;
+	font-size: inherit;
+	color: inherit;
+	background-color: transparent;
+}
+
+input::-ms-clear {
+	display: none;
+}
+
+button,
+input[type="submit"] {
+	display: inline-block;
+	box-shadow: none;
+	background-color: transparent;
+	background: none;
+	cursor: pointer;
+}
+
+input:focus,
+input:active,
+button:focus,
+button:active {
+	outline: none;
+}
+
+button::-moz-focus-inner {
+	padding: 0;
+	border: 0;
+}
+
+label {
+	cursor: pointer;
+}
+
+legend {
+	display: block;
+}
+
+/* my styles  */
+
+#top-gradient {
+	width: 100%;
+	height: 7px;
+	background: rgb(243, 206, 239);
+	background: linear-gradient(
+		90deg,
+		rgba(243, 206, 239, 1) 0%,
+		rgba(167, 158, 239, 1) 50%,
+		rgba(94, 179, 226, 1) 100%
+	);
+}
+
+/* utility  */
+.container-for-cover {
+	max-width: 1536px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+.flex-between {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 1em;
+}
+
+.container {
+	max-width: 1280px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 7rem;
+	padding-right: 7rem;
+}
+
+/* styles  */
+
+:root {
+	--light-text-color: #71727a;
+	--accent-color: #aa7ad2;
+}
+
+@font-face {
+	font-family: "Gilroy Regular";
+	src: url("/assets/fonts/Gilroy-Regular.eot");
+	src: url("/assets/fonts/Gilroy-Regular.eot?#iefix")
+			format("embedded-opentype"),
+		url("./assets/fonts/Gilroy-Regular.woff") format("woff"),
+		url("./assets/fonts/Gilroy-Regular.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "Gilroy Black";
+	src: url("/assets/fonts/Gilroy-Black.eot");
+	src: url("/assets/fonts/Gilroy-Black.eot?#iefix")
+			format("embedded-opentype"),
+		url("./assets/fonts/Gilroy-Black.woff") format("woff"),
+		url("./assets/fonts/Gilroy-Black.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: "Gilroy Regular";
+}
+
+/* header  */
+
+.header-top-bar {
+	padding-top: 1em;
+}
+
+header {
+	color: var(--light-text-color);
+}
+
+.header-links {
+	/* gap: 2em; */
+}
+
+.header-links a:hover {
+	color: var(--accent-color);
+}
+
+.nav-links {
+	margin-right: 3em;
+	gap: 2em;
+}
+
+.online-brief-button {
+	background-color: var(--accent-color);
+	color: white;
+	padding-inline: 1em;
+	padding-block: 0.5em;
+	border: solid 1px var(--accent-color);
+}
+
+.phone-number {
+	font-size: 1.3em;
+}
+
+i {
+	color: var(--accent-color);
+	font-size: 1.3em;
+	padding-inline: 0.6em;
+	/* border: solid 1px var(--accent-color); */
+}
+
+#header-phone-button {
+	max-height: 40px;
+	outline: solid 2px var(--accent-color);
+	display: flex;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+}
+
+/* cover  */
+
+.cover {
+	margin-top: 5em;
+	text-align: center;
+}
+
+.grey-centered-text {
+	color: var(--light-text-color);
+}
+
+#digital-creator {
+	font-size: 8em;
+	font-family: "Gilroy Black";
+	color: #bdcac784;
+	position: absolute;
+	top: 100px;
+	left: 15%;
+	top: 13%;
+	z-index: -1;
+}
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 0.7em;
+}
+
+.cover-cards-container {
+	min-height: 300px;
+	margin-bottom: 2em;
+}
+
+.cover-card {
+	min-width: 32%;
+	height: 270px;
+	background-color: #aa7ad2;
+	border-top-right-radius: 70px;
+	text-align: left;
+}
+
+.cover-card > p {
+	margin-top: 1em;
+	margin-left: 4em;
+	color: white;
+}
+
+.cover-card1 {
+	align-self: end;
+	background: url("/assets/img/Rectangle1.png");
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cover-card2 {
+	align-self: start;
+
+	background: url("/assets/img/Rectangle2.png");
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.cover-card3 {
+	align-self: end;
+	background: url("/assets/img/Rectangle3.png");
+	background-position: left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/* 2xl */
+@media (max-width: 1536px) {
+}
+
+/* xl */
+@media (max-width: 1280px) {
+}
+
+/* lg */
+@media (max-width: 1024px) {
+}
+
+/* md */
+@media (max-width: 768px) {
+}
+
+/* sm */
+@media (max-width: 640px) {
+}
+
+/* xs */
+@media (max-width: 475px) {
+}
