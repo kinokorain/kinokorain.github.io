@@ -9,12 +9,19 @@
 			src="https://kit.fontawesome.com/a7b0e735e6.js"
 			crossorigin="anonymous"
 		></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
 	<body>
 		<header>
 			<div id="top-gradient"></div>
 			<div class="container-for-cover header-top-bar flex-between">
-				<div class="flex-between">
+				<div class="logo-container flex-between">
 					<img src="./assets/img/LogoSM.svg" alt="" />
 					<p>Креативная студия<br />Светланы Мартенсон</p>
 				</div>
@@ -46,86 +53,106 @@
 		<section class="container-for-cover cover">
 			<p id="digital-creator">Digital Creator</p>
 			<p class="grey-centered-text">Креативная студия веб разработки</p>
-			<h1>Разработка сайтов</h1>
+			<div>
+				<div class="typewriter">
+					<h1>Разработка сайтов</h1>
+				</div>
+			</div>
 			<div class="flex-between cover-cards-container">
 				<div class="cover-card cover-card1">
-					<p>
+					<p class="fsz-1-2rem">
 						Дизайн рекламных <br />
 						материалов
 					</p>
 				</div>
 				<div class="cover-card cover-card2">
-					<p>
-						Разработка сайтов<br />
-						"под ключ"
-					</p>
+					<p class="fsz-1-2rem">Разработка сайтов</p>
+					<p id="pod-kluch" class="fsz-1-2rem">"под ключ"</p>
 				</div>
 				<div class="cover-card cover-card3">
-					<p>Брендбук <br />гайдлайн</p>
+					<p class="fsz-1-2rem">Брендбук</p>
+					<p id="guideline" class="fsz-1-2rem">гайдлайн</p>
 				</div>
 			</div>
 		</section>
 
 		<section class="container">
-			<div class="flex-between">
-				<p>
-					Креативная студия с комплексным подходом к цифровым решениям
-				</p>
-				<div>
+			<div class="creative-studio flex-between">
+				<h2>
+					<span class="fsz-3rem"> Креативная студия </span>
+					<span class="fsz-2rem"
+						>c комплексным подходом к цифровым решениям</span
+					>
+				</h2>
+				<div class="fsz-1-2rem">
 					<p>
-						Ваш персональный гид, который выведет ваш бизнес в топ,
-						увеличит количество клиентов и эффективно представит Ваш
-						бренд.
+						Ваш персональный гид, который выведет ваш
+						<span class="accent-color">бизнес в топ,</span> увеличит
+						количество клиентов и эффективно
+						<span class="accent-color">представит Ваш бренд.</span>
 					</p>
+					<br />
 					<p>
-						Полное сопровождение бизнеса, включающее создание
-						уникального бренда и разработку современного,
-						функционального веб-ресурса, который привлекает клиентов
-						и укрепляет ваши позиции на рынке.
+						Полное сопровождение бизнеса, включающее
+						<span class="accent-color"
+							>создание уникального бренда</span
+						>
+						и разработку современного, функционального веб-ресурса,
+						который привлекает клиентов и
+						<span class="accent-color">укрепляет ваши позиции</span>
+						на рынке.
 					</p>
 				</div>
 			</div>
-			<p>Разработка сайтов</p>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+			<h3 class="fsz-1-2rem service-cards-h3">Разработка сайтов</h3>
+			<div class="service-cards">
+				<div><a href="">Landing Page</a></div>
+				<div><a href="">Бизнес-сайт</a></div>
+				<div><a href="">Сайт услуг</a></div>
+				<div><a href="">Корпоративный сайт</a></div>
+				<div><a href="">Сайт каталог</a></div>
+				<div><a href="">Интернет-магазин, портал</a></div>
 			</div>
-			<p>Дизайн/Брендинг</p>
-			<div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
-				<div></div>
+			<h3 class="fsz-1-2rem service-cards-h3">Дизайн/Брендинг</h3>
+			<div class="service-cards">
+				<div><a href="">Дизайн сайта</a></div>
+				<div><a href="">Редизайн сайта</a></div>
+				<div><a href="">Реклама, баннеры</a></div>
+				<div><a href="">Оформление для соц. сетей</a></div>
+				<div><a href="">Дизайн рекламных материалов</a></div>
+				<div><a href="">Motion design</a></div>
+				<div><a href="">Брендбук, гайдлайн</a></div>
+				<div><a href="">Фирменный стиль</a></div>
+				<div><a href="">Презентации</a></div>
+				<div><a href="">Логотип</a></div>
+				<div><a href="">Анимация логотипа</a></div>
+				<div><a href="">Эксклюзивные проекты</a></div>
 			</div>
 		</section>
 
-		<section>
+		<section class="portfolio-section">
 			<div class="container">
 				<div class="flex-between">
-					<h2>Портфолио <br />наших лучших работ</h2>
-					<p>
-						Подборка реализованных проектов, которые демонстрируют
-						наши возможности в брендинге и веб-разработке
+					<h2>
+						<span class="fsz-3rem">Портфолио </span><br /><span
+							class="fsz-2rem"
+							>наших лучших работ</span
+						>
+					</h2>
+					<p class="fsz-1-2rem">
+						<span class="accent-color"
+							>Подборка реализованных проектов,</span
+						>
+						которые демонстрируют наши возможности в брендинге и
+						веб-разработке
 					</p>
 				</div>
-				<ul class="flex-between">
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+				<ul class="flex-between fsz-1-2rem">
+					<li>Разработка сайтов</li>
+					<li>Брендбук, гайдлайн</li>
+					<li>Логотипы</li>
+					<li>Презинтация</li>
+					<li>Реклама, баннеры</li>
 				</ul>
 			</div>
 			<div></div>
@@ -133,42 +160,108 @@
 		</section>
 		<section>
 			<div class="container flex-between">
-				<h2>Комфортное и выгодное сотрудничество с нашей командой</h2>
-				<p>
-					Предлагаем полный спектр услуг по созданию брендов,
-					разработке сайтов, графическому дизайну и разработке
-					рекламных стратегий для успешного позиционирования компании
-					на рынке
+				<h2 class="fsz-2rem">
+					Комфортное и выгодное<span class="fsz-3rem">
+						сотрудничество</span
+					>
+					с нашей командой
+				</h2>
+				<p class="fsz-1-2rem">
+					Предлагаем
+					<span class="accent-color"> полный спектр услуг</span> по
+					созданию брендов, разработке сайтов, графическому дизайну и
+					разработке рекламных стратегий для успешного
+					позиционирования компании на рынке
 				</p>
 			</div>
 			<div class="flex-between">
-				<div></div>
-				<div></div>
+				<div>
+					<h3>Легкость в общении</h3>
+					<p>
+						Мы ценим открытые партнерские отношения и убеждены, что
+						наш творческий потенциал и знания в психологии и
+						маркетинге — ключ к созданию ярких брендов, лучших
+						дизайнерских решений и веб-ресурсов
+					</p>
+				</div>
+				<div>
+					<h3>Команда профессионалов</h3>
+					<p>
+						У нас слаженная команда талантливых профессионалов,
+						готовых вложить частичку души и своего мастерства в ваш
+						успех!
+					</p>
+					<h3>Идеи, которые работают</h3>
+					<p>
+						Превращаем творческие идеи в продуманный и полезный
+						функционал, который эффективно решает задачи вашего
+						бизнеса
+					</p>
+					<h3>Комфортное сотрудничество</h3>
+					<p>
+						С нами комфортно работать благодаря профессионализму,
+						атмосфере доверия и умению делать идеи понятными и
+						привлекательными
+					</p>
+					<button>Обсудить проект</button>
+				</div>
 			</div>
 		</section>
 		<section class="container">
 			<div class="flex-between">
-				<h2>Почему выбирают нас</h2>
-				<p></p>
+				<h2 class="fsz-2rem">
+					Почему <span class="fsz-3rem">выбирают</span> нас
+				</h2>
+				<p>
+					С нами вы получите
+					<span class="accent-color">команду профессионалов,</span>
+					которая будет работать над развитием вашего бренда и ростом
+					продаж
+				</p>
 			</div>
 			<div>
-				<p></p>
-				<p></p>
-				<p></p>
-				<p></p>
-				<p></p>
-				<p></p>
+				<ol>
+					<li>
+						Прямые исполнители веб-разработки, к которым менеджеры
+						других агентств по созданию сайтов часто обращаются
+						напрямую
+					</li>
+					<li>
+						Гарантируем надежное развитие для эффективного создания
+						и сопровождения веб-проектов по выгодным условиям
+					</li>
+					<li>
+						Для каждого проекта мы определяем задачи, необходимые
+						для достижения конкретной цели, и полностью погружаемся
+						в реализацию их решений
+					</li>
+					<li>
+						Квалифицированные специалисты с большим опытом работы в
+						сфере информационных технологий
+					</li>
+					<li>
+						Развиваем ваш проект вместе с вами, создавая надежные
+						веб-ресурсы, соответствующие вашим требованиям
+					</li>
+					<li>
+						Обладаем обширным опытом сотрудничества с клиентами как
+						из России, так и из других стран
+					</li>
+				</ol>
 			</div>
 		</section>
-		<section>
+		<section class="carousel">
 			<h2>carousel</h2>
 		</section>
 		<section class="container">
 			<div class="flex-between">
-				<h2>Часто задаваемые вопросы</h2>
+				<h2 class="fsz-2rem">
+					Часто задаваемые <span class="fsz-3rem">вопросы</span>
+				</h2>
 				<p>
-					Здесь вы найдете ответы на самые частые вопросы о нашем
-					сотрудничестве, услугах и процессе работы
+					Здесь вы <span class="accent-color">найдете ответы</span> на
+					самые частые вопросы о нашем сотрудничестве, услугах и
+					процессе работы
 				</p>
 			</div>
 			<div>qna block</div>

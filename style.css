@@ -136,7 +136,7 @@ legend {
 .flex-between {
 	display: flex;
 	justify-content: space-between;
-	align-items: center;
+	/* align-items: center; */
 	gap: 1em;
 }
 
@@ -148,11 +148,31 @@ legend {
 	padding-right: 7rem;
 }
 
+.fsz-3rem {
+	font-size: 3rem;
+	/* font-weight: 800; */
+	color: black;
+}
+
+.fsz-2rem {
+	font-size: 2rem;
+	color: var(--light-text-color);
+}
+
+.fsz-1-2rem {
+	font-size: 1.2rem;
+}
+
+.accent-color {
+	color: var(--accent-color);
+}
+
 /* styles  */
 
 :root {
 	--light-text-color: #71727a;
 	--accent-color: #aa7ad2;
+	font-size: 16px;
 }
 
 @font-face {
@@ -179,20 +199,27 @@ legend {
 
 body {
 	font-family: "Gilroy Regular";
+	color: var(--light-text-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: black;
 }
 
 /* header  */
 
 .header-top-bar {
-	padding-top: 1em;
+	margin-top: 1em;
+	align-items: center;
 }
 
 header {
 	color: var(--light-text-color);
-}
-
-.header-links {
-	/* gap: 2em; */
 }
 
 .header-links a:hover {
@@ -200,6 +227,8 @@ header {
 }
 
 .nav-links {
+	align-items: center;
+	height: 100%;
 	margin-right: 3em;
 	gap: 2em;
 }
@@ -210,10 +239,12 @@ header {
 	padding-inline: 1em;
 	padding-block: 0.5em;
 	border: solid 1px var(--accent-color);
+	height: 100%;
 }
 
 .phone-number {
 	font-size: 1.3em;
+	align-self: center;
 }
 
 i {
@@ -224,7 +255,7 @@ i {
 }
 
 #header-phone-button {
-	max-height: 40px;
+	height: fit-content;
 	outline: solid 2px var(--accent-color);
 	display: flex;
 	align-items: center;
@@ -232,10 +263,15 @@ i {
 	padding: 0;
 }
 
+.logo-container {
+	align-items: center;
+}
+
 /* cover  */
 
 .cover {
 	margin-top: 5em;
+	margin-bottom: 6em;
 	text-align: center;
 }
 
@@ -254,19 +290,14 @@ i {
 	z-index: -1;
 }
 
-h1 {
-	font-size: 3rem;
-	margin-bottom: 0.7em;
-}
-
 .cover-cards-container {
-	min-height: 300px;
+	min-height: 310px;
 	margin-bottom: 2em;
 }
 
 .cover-card {
 	min-width: 32%;
-	height: 270px;
+	height: 280px;
 	background-color: #aa7ad2;
 	border-top-right-radius: 70px;
 	text-align: left;
@@ -295,6 +326,18 @@ h1 {
 	background-size: cover;
 }
 
+#pod-kluch {
+	float: right;
+	margin-top: 0;
+	margin-right: 4em;
+}
+
+#guideline {
+	float: right;
+	margin-top: 0;
+	margin-right: 8em;
+}
+
 .cover-card3 {
 	align-self: end;
 	background: url("/assets/img/Rectangle3.png");
@@ -302,6 +345,111 @@ h1 {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+h1 {
+	font-size: 3rem;
+	margin-bottom: 0.7em;
+	color: black;
+	font-family: "Roboto Mono", monospace;
+	font-optical-sizing: auto;
+	font-weight: 300;
+}
+
+/* typewriter effect  */
+.typewriter {
+	display: flex;
+	justify-content: center;
+	align-items: start;
+	margin-bottom: 1em;
+	/* border: solid 1px red; */
+	width: min-content;
+	margin: 0 auto;
+}
+
+.typewriter h1 {
+	width: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+	border-right: 3px solid;
+	animation: typing 7s steps(17) infinite forwards,
+		blink 0.4s step-end infinite alternate;
+	margin: 0;
+	margin-bottom: 0.3em;
+}
+
+@keyframes typing {
+	0% {
+		width: 0;
+	}
+
+	30% {
+		width: 100%;
+	}
+	60% {
+		width: 100%;
+	}
+	80% {
+		width: 0;
+	}
+	100% {
+		width: 0;
+	}
+}
+
+@keyframes blink {
+	50% {
+		border-color: transparent;
+	}
+}
+
+/* creative studio  */
+
+.creative-studio > * {
+	width: 45%;
+}
+
+.service-cards > div {
+	border: solid 1px #d5d1d1;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0.7em;
+	font-size: 0.9em;
+	text-align: center;
+	transition: all 0.2s;
+}
+
+.service-cards > div:hover {
+	border-color: var(--accent-color);
+	color: var(--accent-color);
+}
+
+.service-cards {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.service-cards-h3 {
+	margin-top: 2em;
+}
+
+/* portfolio  */
+.portfolio-section {
+	margin-top: 5em;
+}
+
+/* carousel  */
+.carousel {
+	width: 100vw;
+	background-color: #8775a7;
+	height: 200px;
+}
+
+/* frequently asked  */
+
+/* media queries  */
 
 /* 2xl */
 @media (max-width: 1536px) {
