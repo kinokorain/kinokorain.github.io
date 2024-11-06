@@ -17,47 +17,141 @@
 			rel="stylesheet"
 		/>
 		<script src="./script.js" defer></script>
+		<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 	</head>
 	<body>
 		<header>
 			<div id="top-gradient"></div>
-			<div class="container-for-cover header-top-bar flex-between">
-				<div class="logo-container flex-between">
-					<img src="./assets/img/LogoSM.svg" alt="" />
-					<p>Креативная студия<br />Светланы Мартенсон</p>
-				</div>
-
-				<div class="flex-between header-links">
-					<nav>
-						<ul class="flex-between nav-links">
-							<li><a href="">Портфолио</a></li>
-							<li><a href="">Услуги</a></li>
-							<li><a href="">Цены</a></li>
-							<li><a href="">О нас</a></li>
-							<li><a href="">Контакты</a></li>
-						</ul>
-					</nav>
-					<div class="flex-between">
-						<div class="phone-button">
-							<button class="online-brief-button">
-								Онлайн БРИФ
-							</button>
-							<i class="fa-regular fa-envelope"></i>
+			<div class="header-flex container-for-cover">
+				<div class="header-top-bar flex-between">
+					<div class="logo-container flex-between">
+						<img src="./assets/img/LogoSM.svg" alt="" />
+						<p>Креативная студия<br />Светланы Мартенсон</p>
+					</div>
+					<div class="flex-between header-links">
+						<nav>
+							<ul class="flex-between nav-links">
+								<li><a href="">Портфолио</a></li>
+								<li><a href="">Услуги</a></li>
+								<li><a href="">Цены</a></li>
+								<li><a href="">О нас</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+						</nav>
+						<div class="header-brief-container flex-between">
+							<div class="brief-button-container">
+								<button class="online-brief-button">
+									Онлайн БРИФ
+								</button>
+								<div class="mail-icon">
+									<i class="fa-regular fa-envelope"> </i>
+								</div>
+								<a id="email-link" href="">martenson@bk.ru</a>
+							</div>
+							<div class="brief-contact-container">
+								<a class="phone-number" href=""
+									>+7(981) 162 01 70</a
+								>
+							</div>
 						</div>
-						<a class="phone-number" href="">+7(981) 162 01 70</a>
 					</div>
 				</div>
-				<div><img src="./assets/img/menu.svg" alt="" /></div>
+				<div>
+					<div class="ham-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="off-screen-menu flex-between">
+						<p class="digital-creator">Digital Creator</p>
+						<div>
+							<h2>Главное меню</h2>
+							<ul>
+								<li><a href="">Главная</a></li>
+								<li><a href="">Партнерам</a></li>
+								<li><a href="">Разработка сайтов</a></li>
+								<li><a href="">Дизайн & брендбук</a></li>
+								<li><a href="">Вопрос-ответ</a></li>
+								<li><a href="">Портфолио</a></li>
+								<li><a href="">Услуги</a></li>
+								<li><a href="">Цены</a></li>
+								<li><a href="">О нас</a></li>
+								<li><a href="">Контакты</a></li>
+							</ul>
+						</div>
+						<div>
+							<h2>Разработка сайтов</h2>
+							<ul>
+								<li><a href="">Landing Page </a></li>
+								<li><a href="">Бзнес-сайт</a></li>
+								<li><a href="">Сайт услуг</a></li>
+								<li><a href="">Корпоративный сайт</a></li>
+								<li><a href="">Сайт каталог</a></li>
+								<li>
+									<a href="">Интернет-магазин, портал</a>
+								</li>
+							</ul>
+						</div>
+						<div>
+							<h2>Дизайн & брендинг</h2>
+							<ul>
+								<li><a href="">Дизайн сайта </a></li>
+								<li><a href="">Редизайн сата</a></li>
+								<li><a href="">Реклама, баннеры</a></li>
+								<li>
+									<a href="">Оформление для соц. сетей</a>
+								</li>
+								<li>
+									<a href="">Дизайн рекламных материалов</a>
+								</li>
+								<li><a href="">Логотип</a></li>
+								<li><a href="">Анимация логотипа</a></li>
+								<li><a href="">Motion design</a></li>
+								<li><a href="">Эксклюзивные проекты</a></li>
+							</ul>
+						</div>
+						<div>
+							<ul>
+								<li><a href="">Брендбук </a></li>
+								<li><a href="">Гайлайн</a></li>
+								<li><a href="">Фирменный стиль</a></li>
+								<li><a href="">Презентации</a></li>
+							</ul>
+							<button class="accent-button">
+								Обсудить проект
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</header>
 
 		<section class="container-for-cover cover">
-			<p id="digital-creator">Digital Creator</p>
+			<p class="digital-creator">Digital Creator</p>
 			<p class="grey-centered-text">Креативная студия веб разработки</p>
 			<div>
-				<div class="typewriter">
-					<h1>Разработка сайтов</h1>
+				<!-- <div class="typewriter"> -->
+				<!-- <h1>Разработка сайтов</h1> -->
+				<!-- </div> -->
+				<div id="typed-strings">
+					<p>^1000 Разработка сайтов</p>
+					<p>^1000 Лендинг пейдж</p>
+					<p>^1000 Брендбук</p>
+					<p>^1500 Логотип</p>
+					<p>^1500 Интернет магазин</p>
 				</div>
+
+				<h1><span class="auto-type"></span></h1>
+				<script>
+					var typed = new Typed(".auto-type", {
+						stringsElement: "#typed-strings",
+						typeSpeed: 70,
+						backSpeed: 70,
+						backDelay: 1200,
+						// startDelay: 400,
+						loop: true,
+					});
+				</script>
 			</div>
 			<div class="flex-between cover-cards-container">
 				<div class="cover-card cover-card1">
@@ -65,14 +159,50 @@
 						Дизайн рекламных <br />
 						материалов
 					</p>
+					<svg
+						width="15"
+						height="15"
+						viewBox="0 0 15 15"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M14.5839 1.1013C14.5839 0.549011 14.1362 0.101295 13.5839 0.101295L4.58388 0.101296C4.0316 0.101296 3.58388 0.549011 3.58389 1.1013C3.58389 1.65358 4.0316 2.1013 4.58389 2.1013L12.5839 2.1013L12.5839 10.1013C12.5839 10.6536 13.0316 11.1013 13.5839 11.1013C14.1362 11.1013 14.5839 10.6536 14.5839 10.1013L14.5839 1.1013ZM1.5826 14.5168L14.291 1.8084L12.8768 0.394189L0.168382 13.1026L1.5826 14.5168Z"
+							fill="white"
+						/>
+					</svg>
 				</div>
 				<div class="cover-card cover-card2">
 					<p class="fsz-1-2rem">Разработка сайтов</p>
 					<p id="pod-kluch" class="fsz-1-2rem">"под ключ"</p>
+					<svg
+						width="15"
+						height="15"
+						viewBox="0 0 15 15"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M14.5839 1.1013C14.5839 0.549011 14.1362 0.101295 13.5839 0.101295L4.58388 0.101296C4.0316 0.101296 3.58388 0.549011 3.58389 1.1013C3.58389 1.65358 4.0316 2.1013 4.58389 2.1013L12.5839 2.1013L12.5839 10.1013C12.5839 10.6536 13.0316 11.1013 13.5839 11.1013C14.1362 11.1013 14.5839 10.6536 14.5839 10.1013L14.5839 1.1013ZM1.5826 14.5168L14.291 1.8084L12.8768 0.394189L0.168382 13.1026L1.5826 14.5168Z"
+							fill="white"
+						/>
+					</svg>
 				</div>
 				<div class="cover-card cover-card3">
 					<p class="fsz-1-2rem">Брендбук</p>
 					<p id="guideline" class="fsz-1-2rem">гайдлайн</p>
+					<svg
+						width="15"
+						height="15"
+						viewBox="0 0 15 15"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<path
+							d="M14.5839 1.1013C14.5839 0.549011 14.1362 0.101295 13.5839 0.101295L4.58388 0.101296C4.0316 0.101296 3.58388 0.549011 3.58389 1.1013C3.58389 1.65358 4.0316 2.1013 4.58389 2.1013L12.5839 2.1013L12.5839 10.1013C12.5839 10.6536 13.0316 11.1013 13.5839 11.1013C14.1362 11.1013 14.5839 10.6536 14.5839 10.1013L14.5839 1.1013ZM1.5826 14.5168L14.291 1.8084L12.8768 0.394189L0.168382 13.1026L1.5826 14.5168Z"
+							fill="white"
+						/>
+					</svg>
 				</div>
 			</div>
 		</section>
@@ -608,13 +738,65 @@
 					</p>
 				</div>
 			</div>
+			<div class="faq">
+				<div class="question" onclick="toggleAnswer(this)">
+					<h3>Что входит в стоимость создания сайта под ключ?</h3>
+					<!-- <i class="fa-light fa-plus"></i> -->
+					<svg
+						class="plus-icon"
+						width="36"
+						height="36"
+						viewBox="0 0 36 36"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<rect
+							class="svg-rect"
+							x="17.1373"
+							y="33.8407"
+							width="32.3071"
+							height="0.92306"
+							transform="rotate(-90 17.1373 33.8407)"
+							fill="#71727A"
+							stroke="#71727A"
+							stroke-width="0.923061"
+						/>
+						<rect
+							class="svg-rect"
+							x="1.44502"
+							y="17.2257"
+							width="32.3071"
+							height="0.92306"
+							fill="#71727A"
+							stroke="#71727A"
+							stroke-width="0.923061"
+						/>
+					</svg>
+				</div>
+				<div class="answer">
+					<p>
+						Зависит от вида сайта: создание сайта-визитки и
+						разработка онлайн-сервиса сильно отличаются друг от
+						друга. Однако независимо от типа услуги создание сайта
+						включает в себя:
+					</p>
+					<ol>
+						<li>конкурентный анализ</li>
+						<li>постраничную разработку структуры</li>
+						<li>дизайн и верстка страниц</li>
+						<li>наполнение сайта базовой информацией</li>
+						<li>первичная SЕО оптимизация</li>
+						<li>размещение ресурса на хостинге</li>
+					</ol>
+				</div>
+			</div>
 		</section>
 		<section class="lets-work-text container flex-between">
 			<div>
 				<p class="fsz-1-2rem">Понравились наши условия?</p>
 				<h2 class="fsz-2rem">
 					Начнем <br />
-					сотрудничество
+					сотрудничество<br />
 					<span class="fsz-3rem">прямо сейчас</span>
 				</h2>
 				<div class="lets-work-inp-container fsz-1-2rem">
@@ -695,7 +877,7 @@
 						<button class="online-brief-button">Онлайн БРИФ</button>
 					</div> -->
 					<div class="footer-contacts">
-						<div class="phone-button">
+						<div class="brief-button-container">
 							<button class="online-brief-button">
 								Онлайн БРИФ
 							</button>
