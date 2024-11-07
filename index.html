@@ -26,7 +26,10 @@
 				<div class="header-top-bar flex-between">
 					<div class="logo-container flex-between">
 						<img src="./assets/img/LogoSM.svg" alt="" />
-						<p>Креативная студия<br />Светланы Мартенсон</p>
+						<div>
+							<p>Креативная студия</p>
+							<p>Светланы Мартенсон</p>
+						</div>
 					</div>
 					<div class="flex-between header-links">
 						<nav>
@@ -117,7 +120,7 @@
 								<li><a href="">Фирменный стиль</a></li>
 								<li><a href="">Презентации</a></li>
 							</ul>
-							<button class="accent-button">
+							<button class="openModal accent-button">
 								Обсудить проект
 							</button>
 						</div>
@@ -281,9 +284,10 @@
 				<ul class="flex-between fsz-1-2rem portfolio-titles">
 					<li class="for-underline">Разработка сайтов</li>
 					<li class="for-underline">Брендбук, гайдлайн</li>
-					<li class="for-underline">Логотипы</li>
+					<li class="for-short-underline">Логотипы</li>
 					<li class="for-underline">Презентация</li>
 					<li class="for-underline">Реклама, баннеры</li>
+					<li class="for-underline">Баннеры</li>
 				</ul>
 			</div>
 			<div class="portfolio-container-dev">
@@ -372,7 +376,82 @@
 						атмосфере доверия и умению делать идеи понятными и
 						привлекательными
 					</p>
-					<button class="discuss-project">Обсудить проект</button>
+					<button class="openModal discuss-project">
+						Обсудить проект
+					</button>
+					<div class="modal">
+						<div class="form">
+							<button class="closeModal">x</button>
+							<p>Заполните форму</p>
+							<p>Укажите, пожалуйста, ваши контакты для связи</p>
+							<form action="">
+								<input
+									placeholder="Ваше имя"
+									type="text"
+									class="text-inputs"
+								/>
+								<input
+									placeholder="Почта"
+									type="email"
+									class="text-inputs"
+								/>
+								<input
+									placeholder="Телефон"
+									type="tel"
+									class="text-inputs"
+								/>
+								<select name="project-type">
+									<option default selected>
+										Тип проекта
+									</option>
+									<option>Разработка сайта</option>
+									<option>Редизайн</option>
+									<option>Логотип</option>
+									<option>Брендбук</option>
+									<option>Другое</option>
+								</select>
+								<p>Какой способ связи вам подходит?</p>
+								<label
+									class="contact-platform-input"
+									for="Telegram"
+								>
+									<input
+										value="Telegram"
+										id="Telegram"
+										type="checkbox"
+									/>
+									<span class="checkmark"></span>
+									Telegram
+								</label>
+								<label
+									class="contact-platform-input"
+									for="WhatsApp"
+								>
+									<input
+										value="WhatsApp"
+										id="WhatsApp"
+										type="checkbox"
+									/>
+									<span class="checkmark"></span>
+									WhatsApp
+								</label>
+								<label
+									class="contact-platform-input"
+									for="E-mail"
+								>
+									<input
+										value="E-mail"
+										id="E-mail"
+										type="checkbox"
+									/>
+									<span class="checkmark"></span>
+									E-mail
+								</label>
+
+								<button class="accent-button">Отправить</button>
+							</form>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -881,7 +960,9 @@
 							<button class="online-brief-button">
 								Онлайн БРИФ
 							</button>
-							<i class="fa-regular fa-envelope"></i>
+							<div class="mail-icon">
+								<i class="fa-regular fa-envelope"></i>
+							</div>
 						</div>
 						<div class="phone-and-icons">
 							<div>
@@ -894,13 +975,13 @@
 				</div>
 			</div>
 			<div class="darker-footer">
-				<div class="flex-between content">
+				<div class="footer-bottom-half flex-between content">
 					<p>Сopyright © All rights reserved 2007-2024</p>
 					<ul class="flex-between">
-						<li><a href="">WhatsApp</a></li>
-						<li><a href="">Telegram</a></li>
-						<li><a href="">VK</a></li>
-						<li><a href="">Behance</a></li>
+						<li><a id="WhatsAppFooter" href="">WhatsApp</a></li>
+						<li><a id="TelegramFooter" href="">Telegram</a></li>
+						<li><a id="VKFooter" href="">VK</a></li>
+						<li><a id="BehanceFooter" href="">Behance</a></li>
 					</ul>
 				</div>
 			</div>

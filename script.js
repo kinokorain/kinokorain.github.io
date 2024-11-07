@@ -14,11 +14,25 @@ function toggleAnswer(element) {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
+	// ham menu
 	const hamMenu = document.querySelector(".ham-menu");
 	const offScreenMenu = document.querySelector(".off-screen-menu");
 	hamMenu.addEventListener("click", () => {
 		hamMenu.classList.toggle("active");
 		offScreenMenu.classList.toggle("active");
 		document.body.classList.toggle("active");
+	});
+
+	// form modal
+	const Modal = document.querySelector(".modal");
+	const openModalBtn = document.querySelectorAll(".openModal");
+	const closeModalBtn = document.querySelector(".closeModal");
+	openModalBtn.forEach((element) => {
+		element.addEventListener("click", () => {
+			Modal.classList.add("open");
+		});
+	});
+	closeModalBtn.addEventListener("click", () => {
+		Modal.classList.remove("open");
 	});
 });
