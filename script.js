@@ -13,6 +13,19 @@ function toggleAnswer(element) {
 	element.classList.toggle("open");
 }
 
+function toggleMenuMobile(element) {
+	const answer = element.nextElementSibling;
+	if (answer.style.maxHeight) {
+		console.log(element.firstChild.nextElementSibling);
+		answer.style.maxHeight = null; // Скрыть ответ
+	} else {
+		console.log(element.firstChild.nextElementSibling);
+
+		answer.style.maxHeight = answer.scrollHeight + "px"; // Установить максимальную высоту равной высоте содержимого
+	}
+	element.classList.toggle("open");
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 	// ham menu
 	const hamMenu = document.querySelector(".ham-menu");
