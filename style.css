@@ -687,7 +687,7 @@ body.active {
 
 .cover-card1 {
 	align-self: end;
-	background: url("/assets/img/Rectangle1.png");
+	background: url("./assets/img/Rectangle1.png");
 	background-position: left;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -697,7 +697,7 @@ body.active {
 .cover-card2 {
 	align-self: start;
 
-	background: url("/assets/img/Rectangle2.png");
+	background: url("./assets/img/Rectangle2.png");
 	background-position: left;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -717,7 +717,7 @@ body.active {
 
 .cover-card3 {
 	align-self: end;
-	background: url("/assets/img/Rectangle3.png");
+	background: url("./assets/img/Rectangle3.png");
 	background-position: left;
 	background-repeat: no-repeat;
 	background-size: cover;
