@@ -26,6 +26,27 @@ function toggleMenuMobile(element) {
 	element.classList.toggle("open");
 }
 
+function toggleDevStage(element) {
+	const paragraphs = document.querySelectorAll(".dev-stage-p");
+	const headings = document.querySelectorAll(".dev-stage-h3");
+	const answer = element.nextElementSibling;
+	if (answer.style.maxHeight) {
+		console.log(answer);
+		element.style.color = "#71727A";
+		answer.style.maxHeight = null; // Скрыть ответ
+	} else {
+		console.log(element.nextElementSibling);
+		paragraphs.forEach((paragraph) => {
+			paragraph.style.maxHeight = null;
+		});
+		headings.forEach((heading) => {
+			heading.style.color = "#71727A";
+		});
+		element.style.color = "#977AD2";
+		answer.style.maxHeight = answer.scrollHeight + "px"; // Установить максимальную высоту равной высоте содержимого
+	}
+}
+
 document.addEventListener("DOMContentLoaded", function () {
 	// ham menu
 	const hamMenu = document.querySelector(".ham-menu");
@@ -47,5 +68,33 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 	closeModalBtn.addEventListener("click", () => {
 		Modal.classList.remove("open");
+	});
+
+	// parallax statue effect
+	const parallax = document.querySelector(".statue-parallax");
+	const frontLayer = document.querySelector(".front-layer");
+	const backLayer = document.querySelector(".back-layer");
+	console.log(parallax, frontLayer, backLayer);
+	// sensitivity for both layers
+	const sFront = 250;
+	const sBack = 400;
+	var x = 0;
+	var y = 0;
+
+	parallax.addEventListener("mousemove", (e) => {
+		x = e.clientX;
+		y = e.clientY;
+
+		frontLayer.style.transform = `
+		translate(
+			${-x / sFront}%,
+			0
+		)`;
+
+		backLayer.style.transform = `
+		translate(
+			${-x / sBack}%,
+			0
+		)`;
 	});
 });
