@@ -16,14 +16,21 @@ function toggleAnswer(element) {
 function toggleMenuMobile(element) {
 	const answer = element.nextElementSibling;
 	if (answer.style.maxHeight) {
-		console.log(element.firstChild.nextElementSibling);
 		answer.style.maxHeight = null; // Скрыть ответ
 	} else {
-		console.log(element.firstChild.nextElementSibling);
-
 		answer.style.maxHeight = answer.scrollHeight + "px"; // Установить максимальную высоту равной высоте содержимого
 	}
 	element.classList.toggle("open");
+}
+
+// price expand effect
+function priceExpand(card) {
+	const content = card.querySelector(".price-content");
+	content.style.maxHeight = content.scrollHeight + "px"; // Установить максимальную высоту равной высоте содержимого
+}
+function priceHide(card) {
+	const content = card.querySelector(".price-content");
+	content.style.maxHeight = null; // Установить максимальную высоту равной высоте содержимого
 }
 
 function toggleDevStage(element) {

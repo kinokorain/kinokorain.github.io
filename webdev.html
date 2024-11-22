@@ -40,11 +40,15 @@
 					<div class="flex-between header-links">
 						<nav>
 							<ul class="flex-between nav-links">
-								<li><a href="">Портфолио</a></li>
-								<li><a href="">Услуги</a></li>
-								<li><a href="">Цены</a></li>
-								<li><a href="">О нас</a></li>
-								<li><a href="">Контакты</a></li>
+								<li>
+									<a href="/index.html#portfolio"
+										>Портфолио</a
+									>
+								</li>
+								<li><a href="/services.html">Услуги</a></li>
+								<li><a href="./webdev.html">Цены</a></li>
+								<li><a href="./Company.html">О нас</a></li>
+								<li><a href="./Contacts.html">Контакты</a></li>
 							</ul>
 						</nav>
 						<div class="header-brief-container flex-between">
@@ -312,6 +316,55 @@
 				</div>
 			</div>
 		</header>
+		<div class="modal">
+			<div class="form">
+				<button class="closeModal">x</button>
+				<p>Заполните форму</p>
+				<p>Укажите, пожалуйста, ваши контакты для связи</p>
+				<form action="">
+					<input
+						placeholder="Ваше имя"
+						type="text"
+						class="text-inputs"
+					/>
+					<input
+						placeholder="Почта"
+						type="email"
+						class="text-inputs"
+					/>
+					<input
+						placeholder="Телефон"
+						type="tel"
+						class="text-inputs"
+					/>
+					<select name="project-type">
+						<option default selected>Тип проекта</option>
+						<option>Разработка сайта</option>
+						<option>Редизайн</option>
+						<option>Логотип</option>
+						<option>Брендбук</option>
+						<option>Другое</option>
+					</select>
+					<p>Какой способ связи вам подходит?</p>
+					<label class="contact-platform-input" for="Telegram">
+						<input value="Telegram" id="Telegram" type="checkbox" />
+						<span class="checkmark"></span>
+						Telegram
+					</label>
+					<label class="contact-platform-input" for="WhatsApp">
+						<input value="WhatsApp" id="WhatsApp" type="checkbox" />
+						<span class="checkmark"></span>
+						WhatsApp
+					</label>
+					<label class="contact-platform-input" for="E-mail">
+						<input value="E-mail" id="E-mail" type="checkbox" />
+						<span class="checkmark"></span>
+						E-mail
+					</label>
+					<button class="accent-button">Отправить</button>
+				</form>
+			</div>
+		</div>
 
 		<section class="container-for-cover cover">
 			<p class="digital-creator">Digital Creator</p>
@@ -801,64 +854,6 @@
 					</div>
 				</div>
 			</div>
-
-			<div class="modal">
-				<div class="form">
-					<button class="closeModal">x</button>
-					<p>Заполните форму</p>
-					<p>Укажите, пожалуйста, ваши контакты для связи</p>
-					<form action="">
-						<input
-							placeholder="Ваше имя"
-							type="text"
-							class="text-inputs"
-						/>
-						<input
-							placeholder="Почта"
-							type="email"
-							class="text-inputs"
-						/>
-						<input
-							placeholder="Телефон"
-							type="tel"
-							class="text-inputs"
-						/>
-						<select name="project-type">
-							<option default selected>Тип проекта</option>
-							<option>Разработка сайта</option>
-							<option>Редизайн</option>
-							<option>Логотип</option>
-							<option>Брендбук</option>
-							<option>Другое</option>
-						</select>
-						<p>Какой способ связи вам подходит?</p>
-						<label class="contact-platform-input" for="Telegram">
-							<input
-								value="Telegram"
-								id="Telegram"
-								type="checkbox"
-							/>
-							<span class="checkmark"></span>
-							Telegram
-						</label>
-						<label class="contact-platform-input" for="WhatsApp">
-							<input
-								value="WhatsApp"
-								id="WhatsApp"
-								type="checkbox"
-							/>
-							<span class="checkmark"></span>
-							WhatsApp
-						</label>
-						<label class="contact-platform-input" for="E-mail">
-							<input value="E-mail" id="E-mail" type="checkbox" />
-							<span class="checkmark"></span>
-							E-mail
-						</label>
-						<button class="accent-button">Отправить</button>
-					</form>
-				</div>
-			</div>
 		</section>
 
 		<section class="carousel">
@@ -1018,7 +1013,11 @@
 			</div>
 			<div class="price-right-side">
 				<div class="price-cards-container">
-					<div class="price-card">
+					<div
+						class="price-card"
+						onmouseenter="priceExpand(this)"
+						onmouseleave="priceHide(this)"
+					>
 						<h3 class="landing-heading">Лендинг пейдж</h3>
 						<p>Одностраничный сайт на услугу или товар</p>
 						<p class="price-tag">от <span> 40 000 ₽</span></p>
@@ -1040,10 +1039,31 @@
 							<li>Бессрочная гарантия</li>
 						</ul>
 					</div>
-					<div class="price-card">
+					<div
+						class="price-card"
+						onmouseenter="priceExpand(this)"
+						onmouseleave="priceHide(this)"
+					>
 						<h3 class="business-heading">Бизнес-сайт</h3>
 						<p>Корпоративный сайт из нескольких страниц</p>
 						<p class="price-tag">от <span> 55 000 ₽</span></p>
+						<ul class="price-content">
+							<li>Эксклюзивный дизайн</li>
+							<li>Html+css, Wordpress</li>
+							<li>Адаптивность</li>
+							<li>Продающая главная страница</li>
+							<li>Каталог услуг/товаров</li>
+							<li>Фото/видео галерея</li>
+							<li>Интеграция отзывов</li>
+							<li>Портфолио/проекты</li>
+							<li>Мультиязычность</li>
+							<li>Онлайн-консультант</li>
+							<li>Прочий функционал</li>
+							<li>Наполнение</li>
+							<li>Регистрация в поисковых системах</li>
+							<li>SSL-сертификат</li>
+							<li>Бессрочная гарантия</li>
+						</ul>
 					</div>
 					<div class="price-card">
 						<h3 class="shop-heading">Интернет-магазин</h3>
@@ -1134,7 +1154,7 @@
 						<li><a href="">Партнерам</a></li>
 						<li><a href="">Разработка сайтов</a></li>
 						<li><a href="">Дизайн & брендбук</a></li>
-						<li><a href="">Вопрос-ответ</a></li>
+						<li><a href="./Questions.html">Вопрос-ответ</a></li>
 					</ul>
 					<ul>
 						<li><a href="">Портфолио </a></li>
@@ -1169,10 +1189,10 @@
 				<div class="footer-bottom-half flex-between content">
 					<p>Сopyright © All rights reserved 2007-2024</p>
 					<ul class="flex-between">
-						<li><a id="WhatsAppFooter" href="">WhatsApp</a></li>
-						<li><a id="TelegramFooter" href="">Telegram</a></li>
-						<li><a id="VKFooter" href="">VK</a></li>
-						<li><a id="BehanceFooter" href="">Behance</a></li>
+						<li><a class="WhatsAppFooter" href="">WhatsApp</a></li>
+						<li><a class="TelegramFooter" href="">Telegram</a></li>
+						<li><a class="VKFooter" href="">VK</a></li>
+						<li><a class="BehanceFooter" href="">Behance</a></li>
 					</ul>
 				</div>
 			</div>
