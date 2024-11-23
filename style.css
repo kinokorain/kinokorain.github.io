@@ -626,13 +626,7 @@ body.active {
 	height: 100vh;
 }
 
-.BgUpBlue {
-	position: absolute;
-	top: 0;
-	left: 0;
-	z-index: -1;
-	opacity: 0.6;
-}
+
 
 /* cover  */
 
@@ -1740,7 +1734,7 @@ select {
 
 @media (max-width: 1920px) {
 	body {
-		/* background-color: seagreen; */
+		background-color: seagreen;
 	}
 	:root{
 		font-size: 22px;
@@ -2743,7 +2737,7 @@ select {
 }
 
 .statue-parallax > img {
-	/* width: 100%; */
+	width: 100%;
 }
 
 .statue-parallax .digital-creator {
