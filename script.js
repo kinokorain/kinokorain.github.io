@@ -13,6 +13,32 @@ function toggleAnswer(element) {
   element.classList.toggle("open");
 }
 
+function setMailInput(element) {
+  const biggerLabel = element.parentNode;
+  const input = document.querySelector("#lets-work-input");
+  const otherLabel = biggerLabel.querySelector(".input-select-num");
+  element.classList.toggle("hidden");
+  if (otherLabel.classList.contains("hidden")) {
+    otherLabel.classList.toggle("hidden");
+  }
+  biggerLabel.classList.add("active");
+  input.setAttribute("placeholder", "Почта");
+  input.setAttribute("type", "mail");
+}
+
+function setNumInput(element) {
+  const biggerLabel = element.parentNode;
+  const input = document.querySelector("#lets-work-input");
+  const otherLabel = biggerLabel.querySelector(".input-select-mail");
+  element.classList.toggle("hidden");
+  if (otherLabel.classList.contains("hidden")) {
+    otherLabel.classList.toggle("hidden");
+  }
+  biggerLabel.classList.add("active");
+  input.setAttribute("placeholder", "Телефон");
+  input.setAttribute("type", "tel");
+}
+
 function toggleMenuMobile(element) {
   const answer = element.nextElementSibling;
   if (answer.style.maxHeight) {
@@ -39,7 +65,7 @@ function toggleDevStage(element) {
   const answer = element.nextElementSibling;
   if (answer.style.maxHeight) {
     console.log(answer);
-    element.style.color = "#71727A";
+    element.classList.toggle("accent-color");
     answer.style.maxHeight = null; // Скрыть ответ
   } else {
     console.log(element.nextElementSibling);
@@ -47,9 +73,11 @@ function toggleDevStage(element) {
       paragraph.style.maxHeight = null;
     });
     headings.forEach((heading) => {
-      heading.style.color = "#71727A";
+      if (heading.classList.contains("accent-color")) {
+        heading.classList.toggle("accent-color");
+      }
     });
-    element.style.color = "#977AD2";
+    element.classList.toggle("accent-color");
     answer.style.maxHeight = answer.scrollHeight + "px"; // Установить максимальную высоту равной высоте содержимого
   }
 }
@@ -78,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // parallax statue effect
-  const parallax = document.querySelector(".statue-parallax");
+  const parallax = document.querySelector(".track-mouse");
   const frontLayer = document.querySelector(".front-layer");
   const backLayer = document.querySelector(".back-layer");
   console.log(parallax, frontLayer, backLayer);
@@ -87,6 +115,10 @@ document.addEventListener("DOMContentLoaded", function () {
   const sBack = 400;
   var x = 0;
   var y = 0;
+
+  parallax.addEventListener("mouseenter", (e) => {
+    // alert("haiii");
+  });
 
   parallax.addEventListener("mousemove", (e) => {
     x = e.clientX;
