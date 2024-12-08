@@ -22,7 +22,6 @@
   <body>
     <div class="for-gray-bg"></div>
     <header>
-      <img class="BgUpBlue" src="./assets/img/BgUpBlue.png" alt="" />
       <div id="top-gradient"></div>
       <div class="header-flex container-for-cover">
         <div class="header-top-bar flex-between">
@@ -51,13 +50,17 @@
             <div class="header-brief-container flex-between">
               <div class="brief-button-container">
                 <button class="online-brief-button">Онлайн БРИФ</button>
-                <div class="mail-icon">
+                <a class="mail-icon" href="mailto:martenson@bk.ru">
                   <i class="fa-regular fa-envelope"> </i>
-                </div>
-                <a id="email-link" href="">martenson@bk.ru</a>
+                </a>
+                <a id="email-link" href="mailto:martenson@bk.ru"
+                  >martenson@bk.ru</a
+                >
               </div>
               <div class="brief-contact-container">
-                <a class="phone-number" href="">+7(981) 162 01 70</a>
+                <a class="phone-number" href="tel:79811620170"
+                  >+7(981) 162 01 70</a
+                >
               </div>
             </div>
           </div>
@@ -74,16 +77,16 @@
               <div>
                 <h2>Главное меню</h2>
                 <ul>
-                  <li><a href="">Главная</a></li>
+                  <li><a href="./">Главная</a></li>
                   <li><a href="">Партнерам</a></li>
-                  <li><a href="">Разработка сайтов</a></li>
+                  <li><a href="./webdev.html">Разработка сайтов</a></li>
                   <li><a href="">Дизайн & брендбук</a></li>
-                  <li><a href="">Вопрос-ответ</a></li>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./Questions.html">Вопрос-ответ</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
               </div>
               <div>
@@ -137,11 +140,11 @@
                 />
                 <a href="" class="online-brief-link">Онлайн БРИФ</a>
                 <ul>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
                 <div class="faq">
                   <div onclick="toggleMenuMobile(this)" class="question">
@@ -162,15 +165,11 @@
                   </div>
                   <div onclick="toggleMenuMobile(this)" class="answer">
                     <ul>
-                      <li><a href="">Главная</a></li>
+                      <li><a href="./">Главная</a></li>
                       <li><a href="">Партнерам</a></li>
-                      <li>
-                        <a href="">Разработка сайтов</a>
-                      </li>
-                      <li>
-                        <a href="">Дизайн & брендбук</a>
-                      </li>
-                      <li><a href="">Вопрос-ответ</a></li>
+                      <li><a href="./webdev.html">Разработка сайтов</a></li>
+                      <li><a href="">Дизайн & брендбук</a></li>
+                      <li><a href="./Questions.html">Вопрос-ответ</a></li>
                     </ul>
                   </div>
                 </div>
@@ -264,8 +263,10 @@
               </div>
               <div class="menu-bottom">
                 <div class="menu-mail-number">
-                  <a href="">martensonsvetlana@ya.ru</a>
-                  <a href="">+7(981) 162 01 70</a>
+                  <a href="mailto:martensonsvetlana@ya.ru"
+                    >martensonsvetlana@ya.ru</a
+                  >
+                  <a href="tel:79811620170">+7(981) 162 01 70</a>
                 </div>
                 <div class="flex-between">
                   <a href="">WhatsApp</a>
@@ -284,11 +285,36 @@
         <button class="closeModal">x</button>
         <p>Заполните форму</p>
         <p>Укажите, пожалуйста, ваши контакты для связи</p>
-        <form action="">
-          <input placeholder="Ваше имя" type="text" class="text-inputs" />
-          <input placeholder="Почта" type="email" class="text-inputs" />
-          <input placeholder="Телефон" type="tel" class="text-inputs" />
-          <select name="project-type">
+        <form action="https://api.web3forms.com/submit" method="post">
+          <input
+            type="hidden"
+            name="access_key"
+            value="21b95315-1f90-45a7-a857-f940bc2db60c"
+          />
+          <input
+            type="hidden"
+            name="redirect"
+            value="http://127.0.0.1:5500/thanks.html"
+          />
+          <input
+            placeholder="Ваше имя"
+            name="Имя"
+            type="text"
+            class="text-inputs"
+          />
+          <input
+            placeholder="Почта"
+            type="email"
+            class="text-inputs"
+            name="Почта"
+          />
+          <input
+            placeholder="Телефон"
+            type="tel"
+            class="text-inputs"
+            name="Телефон"
+          />
+          <select name="Тип проекта">
             <option default selected>Тип проекта</option>
             <option>Разработка сайта</option>
             <option>Редизайн</option>
@@ -298,21 +324,36 @@
           </select>
           <p>Какой способ связи вам подходит?</p>
           <label class="contact-platform-input" for="Telegram">
-            <input value="Telegram" id="Telegram" type="checkbox" />
+            <input
+              name="Удобная платформа для связи"
+              value="Telegram"
+              id="Telegram"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Telegram
           </label>
           <label class="contact-platform-input" for="WhatsApp">
-            <input value="WhatsApp" id="WhatsApp" type="checkbox" />
+            <input
+              name="Удобная платформа для связи"
+              value="WhatsApp"
+              id="WhatsApp"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             WhatsApp
           </label>
           <label class="contact-platform-input" for="E-mail">
-            <input value="E-mail" id="E-mail" type="checkbox" />
+            <input
+              name="Удобная платформа для связи"
+              value="E-mail"
+              id="E-mail"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             E-mail
           </label>
-          <button class="accent-button">Отправить</button>
+          <button type="submit" class="accent-button">Отправить</button>
         </form>
       </div>
     </div>
@@ -541,19 +582,20 @@
             <img src="./assets/img/LogoSM.svg" alt="" />
             <p>Креативная студия<br />Светланы Мартенсон</p>
           </div>
+
           <ul>
-            <li><a href="">Главная </a></li>
+            <li><a href="./">Главная</a></li>
             <li><a href="">Партнерам</a></li>
-            <li><a href="">Разработка сайтов</a></li>
+            <li><a href="./webdev.html">Разработка сайтов</a></li>
             <li><a href="">Дизайн & брендбук</a></li>
-            <li><a href="">Вопрос-ответ</a></li>
+            <li><a href="./Questions.html">Вопрос-ответ</a></li>
           </ul>
           <ul>
-            <li><a href="">Портфолио </a></li>
-            <li><a href="">Услуги</a></li>
-            <li><a href="">Цены</a></li>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Контакты</a></li>
+            <li><a href="./index.html#portfolio">Портфолио</a></li>
+            <li><a href="./services.html">Услуги</a></li>
+            <li><a href="./webdev.html#price">Цены</a></li>
+            <li><a href="./Company.html">О нас</a></li>
+            <li><a href="./Contacts.html">Контакты</a></li>
           </ul>
           <!-- <div class="footer-button-container">
 						<button class="online-brief-button">Онлайн БРИФ</button>
@@ -561,16 +603,16 @@
           <div class="footer-contacts">
             <div class="brief-button-container">
               <button class="online-brief-button">Онлайн БРИФ</button>
-              <div class="mail-icon">
-                <i class="fa-regular fa-envelope"></i>
-              </div>
+              <a class="mail-icon" href="mailto:martenson@bk.ru">
+                <i class="fa-regular fa-envelope"> </i>
+              </a>
             </div>
             <div class="phone-and-icons">
               <div>
                 <i class="fa-brands fa-whatsapp"></i>
                 <i class="fa-brands fa-telegram"></i>
               </div>
-              <a href="">+7(981) 162 01 70</a>
+              <a href="tel:79811620170">+7(981) 162 01 70</a>
             </div>
           </div>
         </div>

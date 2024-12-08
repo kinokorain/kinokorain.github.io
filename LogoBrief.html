@@ -53,13 +53,17 @@
             <div class="header-brief-container flex-between">
               <div class="brief-button-container">
                 <button class="online-brief-button">Онлайн БРИФ</button>
-                <div class="mail-icon">
+                <a class="mail-icon" href="mailto:martenson@bk.ru">
                   <i class="fa-regular fa-envelope"> </i>
-                </div>
-                <a id="email-link" href="">martenson@bk.ru</a>
+                </a>
+                <a id="email-link" href="mailto:martenson@bk.ru"
+                  >martenson@bk.ru</a
+                >
               </div>
               <div class="brief-contact-container">
-                <a class="phone-number" href="">+7(981) 162 01 70</a>
+                <a class="phone-number" href="tel:79811620170"
+                  >+7(981) 162 01 70</a
+                >
               </div>
             </div>
           </div>
@@ -76,16 +80,16 @@
               <div>
                 <h2>Главное меню</h2>
                 <ul>
-                  <li><a href="">Главная</a></li>
+                  <li><a href="./">Главная</a></li>
                   <li><a href="">Партнерам</a></li>
-                  <li><a href="">Разработка сайтов</a></li>
+                  <li><a href="./webdev.html">Разработка сайтов</a></li>
                   <li><a href="">Дизайн & брендбук</a></li>
-                  <li><a href="">Вопрос-ответ</a></li>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./Questions.html">Вопрос-ответ</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
               </div>
               <div>
@@ -139,11 +143,11 @@
                 />
                 <a href="" class="online-brief-link">Онлайн БРИФ</a>
                 <ul>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
                 <div class="faq">
                   <div onclick="toggleMenuMobile(this)" class="question">
@@ -164,15 +168,11 @@
                   </div>
                   <div onclick="toggleMenuMobile(this)" class="answer">
                     <ul>
-                      <li><a href="">Главная</a></li>
+                      <li><a href="./">Главная</a></li>
                       <li><a href="">Партнерам</a></li>
-                      <li>
-                        <a href="">Разработка сайтов</a>
-                      </li>
-                      <li>
-                        <a href="">Дизайн & брендбук</a>
-                      </li>
-                      <li><a href="">Вопрос-ответ</a></li>
+                      <li><a href="./webdev.html">Разработка сайтов</a></li>
+                      <li><a href="">Дизайн & брендбук</a></li>
+                      <li><a href="./Questions.html">Вопрос-ответ</a></li>
                     </ul>
                   </div>
                 </div>
@@ -266,8 +266,10 @@
               </div>
               <div class="menu-bottom">
                 <div class="menu-mail-number">
-                  <a href="">martensonsvetlana@ya.ru</a>
-                  <a href="">+7(981) 162 01 70</a>
+                  <a href="mailto:martensonsvetlana@ya.ru"
+                    >martensonsvetlana@ya.ru</a
+                  >
+                  <a href="tel:79811620170">+7(981) 162 01 70</a>
                 </div>
                 <div class="flex-between">
                   <a href="">WhatsApp</a>
@@ -347,29 +349,43 @@
         </p>
       </div>
 
-      <form class="brief-form" action="">
+      <form
+        class="brief-form"
+        action="https://api.web3forms.com/submit"
+        method="post"
+      >
+        <input
+          type="hidden"
+          name="access_key"
+          value="21b95315-1f90-45a7-a857-f940bc2db60c"
+        />
+        <input
+          type="hidden"
+          name="redirect"
+          value="http://127.0.0.1:5500/thanks.html"
+        />
         <div>
           <label for="logo_name">Ваше имя</label>
-          <input type="text" id="logo_name" />
+          <input type="text" id="logo_name" name="Имя" />
         </div>
         <div>
           <label for="logo_mail">Ваш e-mail</label>
-          <input type="text" id="logo_mail" />
+          <input type="text" id="logo_mail" name="Почта" />
         </div>
         <div>
           <label for="logo_content">Что будет фигурировать в логотипе?</label>
           <p class="brief-small-text">Название компании</p>
-          <input type="text" id="logo_content" />
+          <input type="text" id="logo_content" name="Название компании" />
         </div>
         <div>
           <label for="logo_meaning"
             >Какой смысл заложен в названии (что это значит?)</label
           >
-          <input type="text" id="logo_meaning" />
+          <input type="text" id="logo_meaning" name="Смысл названия" />
         </div>
         <div>
           <label for="logo_essence">Опишите суть проекта</label>
-          <textarea name="" id="logo_essence"></textarea>
+          <textarea name="Суть проекта" id="logo_essence"></textarea>
         </div>
         <div>
           <label for="logo_purpose"
@@ -381,7 +397,10 @@
             хотите обновить или заменить его? Что именно вас не устраивает в
             старом логотипе?
           </p>
-          <textarea name="" id="logo_purpose"></textarea>
+          <textarea
+            name="Задачи логотипа/фирстиля"
+            id="logo_purpose"
+          ></textarea>
         </div>
         <div>
           <label for="logo_look">Как должен выглядеть ваш новый логотип?</label>
@@ -391,7 +410,7 @@
             приведите их здесь. В чем ваше главное отличие от конкурентов? Какие
             именно качества вашего бренда вы бы хотели отразить в логотипе?
           </p>
-          <textarea name="" id="logo_look"></textarea>
+          <textarea name="Внешний вид логотипа" id="logo_look"></textarea>
         </div>
         <div>
           <label for="logo-what-else"
@@ -402,7 +421,10 @@
             печатная продукция, бланки, визитки, оформление транспорта, стендов,
             фирменной одежды.
           </p>
-          <textarea name="" id="logo-what-else"></textarea>
+          <textarea
+            name="Что ещё нужно разработать"
+            id="logo-what-else"
+          ></textarea>
         </div>
         <div>
           <label for="logo-target-audience"
@@ -413,14 +435,17 @@
             или корпоративные клиенты? Каковы их главные географические,
             возрастные, социальные, поведенческие признаки?
           </p>
-          <textarea name="" id="logo-target-audience"></textarea>
+          <textarea
+            name="Целевая аудитория"
+            id="logo-target-audience"
+          ></textarea>
         </div>
         <div>
           <label for="logo-you-like"
             >Приведите примеры логотипов, которые вам нравятся.</label
           >
 
-          <textarea name="" id="logo-you-like"></textarea>
+          <textarea name="Примеры логотипов" id="logo-you-like"></textarea>
         </div>
         <div>
           <label for="logo-preferences"
@@ -432,7 +457,7 @@
             цветовой гамме должен быть выполнен ваш логотип, приведите их здесь.
             Опишите все возможные требования к вашему новому логотипу.
           </p>
-          <textarea name="" id="logo-preferences"></textarea>
+          <textarea name="Предпочтения" id="logo-preferences"></textarea>
         </div>
         <div>
           <label>Как бы вы определили основные качества логотипа?</label>
@@ -470,18 +495,22 @@
             Какой образ и характер бренда должен быть сформирован?
           </p>
           <label class="contact-platform-input" for="logo-char-fun">
-            <input id="logo-char-fun" type="checkbox" />
+            <input name="эмоция бренда" id="logo-char-fun" type="checkbox" />
             <span class="checkmark"></span>
             Веселье
           </label>
 
           <label class="contact-platform-input" for="logo-char-enjoy">
-            <input id="logo-char-enjoy" type="checkbox" />
+            <input name="эмоция бренда" id="logo-char-enjoy" type="checkbox" />
             <span class="checkmark"></span>
             Наслаждение
           </label>
           <label class="contact-platform-input" for="logo-char-dedication">
-            <input id="logo-char-dedication" type="checkbox" />
+            <input
+              name="эмоция бренда"
+              id="logo-char-dedication"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Посвящение
           </label>
@@ -491,27 +520,47 @@
             Агрессия
           </label>
           <label class="contact-platform-input" for="logo-char-challenge">
-            <input id="logo-char-challenge" type="checkbox" />
+            <input
+              name="эмоция бренда"
+              id="logo-char-challenge"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Вызов
           </label>
           <label class="contact-platform-input" for="logo-char-achievement">
-            <input id="logo-char-achievement" type="checkbox" />
+            <input
+              name="эмоция бренда"
+              id="logo-char-achievement"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Достижения
           </label>
           <label class="contact-platform-input" for="logo-char-supremacy">
-            <input id="logo-char-supremacy" type="checkbox" />
+            <input
+              name="эмоция бренда"
+              id="logo-char-supremacy"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Превосходство
           </label>
           <label class="contact-platform-input" for="logo-char-confidence">
-            <input id="logo-char-confidence" type="checkbox" />
+            <input
+              name="эмоция бренда"
+              id="logo-char-confidence"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Уверенность
           </label>
           <label class="contact-platform-input" for="logo-char-security">
-            <input id="logo-char-security" type="checkbox" />
+            <input
+              name="эмоция бренда"
+              id="logo-char-security"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Безопасность
           </label>
@@ -521,7 +570,7 @@
             >Какие визуальные образы отражают суть вашего бренда?</label
           >
 
-          <textarea name="" id="logo-visual"></textarea>
+          <textarea name="Визуальные образы" id="logo-visual"></textarea>
         </div>
         <div>
           <label for="logo-unacceptable"
@@ -529,14 +578,17 @@
             использования (почему)?</label
           >
 
-          <textarea name="" id="logo-unacceptable"></textarea>
+          <textarea
+            name="Какие образы недопустимы"
+            id="logo-unacceptable"
+          ></textarea>
         </div>
         <div>
           <label for="logo-what-else"
             >Что ещё, что уточнит задачу по разработке фирменного стиля, нам
             необходимо знать?</label
           >
-          <textarea name="" id="logo-what-else"></textarea>
+          <textarea name="Что ещё нужно знать" id="logo-what-else"></textarea>
         </div>
         <div>
           <button type="submit" class="accent-button">Отправить</button>

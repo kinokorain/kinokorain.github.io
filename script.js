@@ -15,28 +15,44 @@ function toggleAnswer(element) {
 
 function setMailInput(element) {
   const biggerLabel = element.parentNode;
-  const input = document.querySelector("#lets-work-input");
+  const oldInput = document.querySelector("#lets-work-input");
+  const input = document.querySelector("#lets-work-input-mail");
+  const otherInput = document.querySelector("#lets-work-input-phone");
+  input.value = "";
+  input.style = "display:initial";
+  oldInput.style = "display:none";
+  otherInput.style = "display:none";
   const otherLabel = biggerLabel.querySelector(".input-select-num");
   element.classList.toggle("hidden");
   if (otherLabel.classList.contains("hidden")) {
     otherLabel.classList.toggle("hidden");
   }
   biggerLabel.classList.add("active");
-  input.setAttribute("placeholder", "Почта");
+  input.setAttribute("placeholder", "your@email.ru");
   input.setAttribute("type", "mail");
+  input.focus();
 }
 
 function setNumInput(element) {
   const biggerLabel = element.parentNode;
-  const input = document.querySelector("#lets-work-input");
+  const oldInput = document.querySelector("#lets-work-input");
+  const input = document.querySelector("#lets-work-input-phone");
+  const otherInput = document.querySelector("#lets-work-input-mail");
+
+  input.value = "";
+  input.style = "display:initial";
+  oldInput.style = "display:none";
+  otherInput.style = "display:none";
+
   const otherLabel = biggerLabel.querySelector(".input-select-mail");
   element.classList.toggle("hidden");
   if (otherLabel.classList.contains("hidden")) {
     otherLabel.classList.toggle("hidden");
   }
   biggerLabel.classList.add("active");
-  input.setAttribute("placeholder", "Телефон");
+  input.setAttribute("placeholder", "+_ (___) ___-__-__");
   input.setAttribute("type", "tel");
+  input.focus();
 }
 
 function toggleMenuMobile(element) {
@@ -82,6 +98,17 @@ function toggleDevStage(element) {
   }
 }
 
+// phone input
+// const phoneInput = document.querySelector("#lets-work-input");
+
+// phoneInput.addEventListener("input", function (e) {
+//   // Удаляем все нецифровые символы
+//   let value = this.value.replace(/D/g, "");
+
+//   // Форматируем номер
+//   let formattedValue = "+7 ";
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   // ham menu
   const hamMenu = document.querySelector(".ham-menu");
@@ -103,6 +130,19 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   closeModalBtn.addEventListener("click", () => {
     Modal.classList.remove("open");
+  });
+
+  // brief modal
+  const BriefModal = document.querySelector(".brief-modal");
+  const openBriefModalBtn = document.querySelectorAll(".openBriefModal");
+  const closeBriefModalBtn = document.querySelector(".closeBriefModal");
+  openBriefModalBtn.forEach((element) => {
+    element.addEventListener("click", () => {
+      BriefModal.classList.add("open");
+    });
+  });
+  closeBriefModalBtn.addEventListener("click", () => {
+    BriefModal.classList.remove("open");
   });
 
   // parallax statue effect

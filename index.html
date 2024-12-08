@@ -17,6 +17,7 @@
     />
     <script src="./script.js" defer></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./vanilla-masker.js"></script>
   </head>
   <body>
     <script src="./wow.js"></script>
@@ -33,7 +34,7 @@
           <div>
             <a
               href="
-						/"
+						./"
             >
               <p>Креативная студия</p>
               <p>Светланы Мартенсон</p>
@@ -54,13 +55,17 @@
             <div class="header-brief-container flex-between">
               <div class="brief-button-container">
                 <button class="online-brief-button">Онлайн БРИФ</button>
-                <div class="mail-icon">
+                <a class="mail-icon" href="mailto:martenson@bk.ru">
                   <i class="fa-regular fa-envelope"> </i>
-                </div>
-                <a id="email-link" href="./">martenson@bk.ru</a>
+                </a>
+                <a id="email-link" href="mailto:martenson@bk.ru"
+                  >martenson@bk.ru</a
+                >
               </div>
               <div class="brief-contact-container">
-                <a class="phone-number" href="">+7(981) 162 01 70</a>
+                <a class="phone-number" href="tel:79811620170"
+                  >+7(981) 162 01 70</a
+                >
               </div>
             </div>
           </div>
@@ -77,16 +82,16 @@
               <div>
                 <h2>Главное меню</h2>
                 <ul>
-                  <li><a href="">Главная</a></li>
+                  <li><a href="./">Главная</a></li>
                   <li><a href="">Партнерам</a></li>
-                  <li><a href="">Разработка сайтов</a></li>
+                  <li><a href="./webdev.html">Разработка сайтов</a></li>
                   <li><a href="">Дизайн & брендбук</a></li>
-                  <li><a href="">Вопрос-ответ</a></li>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./Questions.html">Вопрос-ответ</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
               </div>
               <div>
@@ -140,11 +145,11 @@
                 />
                 <a href="" class="online-brief-link">Онлайн БРИФ</a>
                 <ul>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
                 <div class="faq">
                   <div onclick="toggleMenuMobile(this)" class="question">
@@ -165,15 +170,11 @@
                   </div>
                   <div onclick="toggleMenuMobile(this)" class="answer">
                     <ul>
-                      <li><a href="">Главная</a></li>
+                      <li><a href="./">Главная</a></li>
                       <li><a href="">Партнерам</a></li>
-                      <li>
-                        <a href="">Разработка сайтов</a>
-                      </li>
-                      <li>
-                        <a href="">Дизайн & брендбук</a>
-                      </li>
-                      <li><a href="">Вопрос-ответ</a></li>
+                      <li><a href="./webdev.html">Разработка сайтов</a></li>
+                      <li><a href="">Дизайн & брендбук</a></li>
+                      <li><a href="./Questions.html">Вопрос-ответ</a></li>
                     </ul>
                   </div>
                 </div>
@@ -267,8 +268,10 @@
               </div>
               <div class="menu-bottom">
                 <div class="menu-mail-number">
-                  <a href="">martensonsvetlana@ya.ru</a>
-                  <a href="">+7(981) 162 01 70</a>
+                  <a href="mailto:martensonsvetlana@ya.ru"
+                    >martensonsvetlana@ya.ru</a
+                  >
+                  <a href="tel:79811620170">+7(981) 162 01 70</a>
                 </div>
                 <div class="flex-between">
                   <a href="">WhatsApp</a>
@@ -518,14 +521,38 @@
         </ul>
       </div>
       <div class="portfolio-container-dev">
-        <img src="./assets/img/portfolio-dev/1.png" alt="" />
-        <img src="./assets/img/portfolio-dev/4.png" alt="" />
-        <img src="./assets/img/portfolio-dev/7.png" alt="" />
-        <img src="./assets/img/portfolio-dev/2.png" alt="" />
-        <img src="./assets/img/portfolio-dev/5.png" alt="" />
-        <img src="./assets/img/portfolio-dev/3.png" alt="" />
-        <img src="./assets/img/portfolio-dev/6.png" alt="" />
-        <img src="./assets/img/portfolio-dev/8.png" alt="" />
+        <img
+          src="./assets/img/portfolio-dev/1.png"
+          alt="Веб сайт Cookteam про кухни "
+        />
+        <img
+          src="./assets/img/portfolio-dev/4.png"
+          alt="Веб сайт Updrive про велосипеды "
+        />
+        <img
+          src="./assets/img/portfolio-dev/7.png"
+          alt="Вебсайт про косметику для волос"
+        />
+        <img
+          src="./assets/img/portfolio-dev/2.png"
+          alt="Админ панель на веб сайте"
+        />
+        <img
+          src="./assets/img/portfolio-dev/5.png"
+          alt="Веб сайт Digital kids"
+        />
+        <img
+          src="./assets/img/portfolio-dev/3.png"
+          alt="Веб сайт про недвижимость"
+        />
+        <img
+          src="./assets/img/portfolio-dev/6.png"
+          alt="Веб сайт про доставку еды"
+        />
+        <img
+          src="./assets/img/portfolio-dev/8.png"
+          alt="Веб сайт про дизайн интерьера"
+        />
       </div>
       <div id="watch-more-container">
         <a id="watch-more-link" href=""
@@ -1035,10 +1062,22 @@
 
         <form
           method="post"
-          action=""
+          action="https://api.web3forms.com/submit"
           class="lets-work-inp-container fsz-1-2rem"
         >
-          <input id="lets-work-input" type="text" />
+          <input
+            type="hidden"
+            name="access_key"
+            value="21b95315-1f90-45a7-a857-f940bc2db60c"
+          />
+          <input
+            type="hidden"
+            name="redirect"
+            value="http://127.0.0.1:5500/thanks.html"
+          />
+          <input name="Контакт" id="lets-work-input" type="text" readonly />
+          <input name="Контакт" id="lets-work-input-phone" type="text" />
+          <input name="Контакт" id="lets-work-input-mail" type="text" />
           <label for="lets-work-input" class="mail-or-phone"
             ><span onclick="setMailInput(this)" class="input-select-mail"
               >Почта</span
@@ -1048,9 +1087,9 @@
               >телефон</span
             ></label
           >
-          <button>отправить</button>
+          <button type="submit">отправить</button>
         </form>
-        <div class="flex-between">
+        <div class="flex-end">
           <div class="flex-between">
             <svg
               width="19"
@@ -1065,7 +1104,7 @@
                 stroke="#977AD2"
               />
             </svg>
-            <a class="lets-work-a" href="">+7(981)162-01-70</a>
+            <a class="lets-work-a" href="tel:79811620170">+7(981)162-01-70</a>
           </div>
           <div class="flex-between">
             <svg
@@ -1088,7 +1127,12 @@
                 fill="#AA7AD2"
               />
             </svg>
-            <a class="lets-work-a" href="">martenson@bk.ru</a>
+            <a
+              class="lets-work-a"
+              href="
+            mailto:martenson@bk.ru"
+              >martenson@bk.ru</a
+            >
           </div>
         </div>
         <!-- <label for="lets-work-input">Почта или телефон</label> -->
@@ -1102,19 +1146,20 @@
             <img src="./assets/img/LogoSM.svg" alt="" />
             <p>Креативная студия<br />Светланы Мартенсон</p>
           </div>
+
           <ul>
-            <li><a href="">Главная </a></li>
+            <li><a href="./">Главная</a></li>
             <li><a href="">Партнерам</a></li>
-            <li><a href="">Разработка сайтов</a></li>
+            <li><a href="./webdev.html">Разработка сайтов</a></li>
             <li><a href="">Дизайн & брендбук</a></li>
             <li><a href="./Questions.html">Вопрос-ответ</a></li>
           </ul>
           <ul>
-            <li><a href="">Портфолио </a></li>
-            <li><a href="">Услуги</a></li>
-            <li><a href="">Цены</a></li>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Контакты</a></li>
+            <li><a href="./index.html#portfolio">Портфолио</a></li>
+            <li><a href="./services.html">Услуги</a></li>
+            <li><a href="./webdev.html#price">Цены</a></li>
+            <li><a href="./Company.html">О нас</a></li>
+            <li><a href="./Contacts.html">Контакты</a></li>
           </ul>
           <!-- <div class="footer-button-container">
 						<button class="online-brief-button">Онлайн БРИФ</button>
@@ -1122,23 +1167,25 @@
           <div class="footer-contacts">
             <div class="brief-button-container">
               <button class="online-brief-button">Онлайн БРИФ</button>
-              <div class="mail-icon">
-                <i class="fa-regular fa-envelope"></i>
-              </div>
+              <a class="mail-icon" href="mailto:martenson@bk.ru">
+                <i class="fa-regular fa-envelope"> </i>
+              </a>
             </div>
             <div class="phone-and-icons">
               <div>
                 <i class="fa-brands fa-whatsapp"></i>
                 <i class="fa-brands fa-telegram"></i>
               </div>
-              <a href="">+7(981) 162 01 70</a>
+              <a href="tel:79811620170">+7(981) 162 01 70</a>
             </div>
           </div>
         </div>
       </div>
       <div class="darker-footer">
         <div class="footer-bottom-half flex-between content">
-          <a href="" class="footer-phone-link fsz-2rem">+7(981) 162 01 70</a>
+          <a href="tel:79811620170" class="footer-phone-link"
+            >+7(981) 162 01 70</a
+          >
           <p>Сopyright © All rights reserved 2007-2024</p>
           <ul class="flex-between">
             <li><a class="WhatsAppFooter" href="">WhatsApp</a></li>
@@ -1149,5 +1196,10 @@
         </div>
       </div>
     </footer>
+    <script>
+      VMasker(document.querySelector("#lets-work-input-phone")).maskPattern(
+        "+9(999) 999-99-99"
+      );
+    </script>
   </body>
 </html>

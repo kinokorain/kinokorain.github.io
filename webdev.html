@@ -51,14 +51,18 @@
             </nav>
             <div class="header-brief-container flex-between">
               <div class="brief-button-container">
-                <button class="online-brief-button">Онлайн БРИФ</button>
-                <div class="mail-icon">
+                <button class="online-brief-button openBriefModal">Онлайн БРИФ</button>
+                <a class="mail-icon" href="mailto:martenson@bk.ru">
                   <i class="fa-regular fa-envelope"> </i>
-                </div>
-                <a id="email-link" href="">martenson@bk.ru</a>
+                </a>
+                <a id="email-link" href="mailto:martenson@bk.ru"
+                  >martenson@bk.ru</a
+                >
               </div>
               <div class="brief-contact-container">
-                <a class="phone-number" href="">+7(981) 162 01 70</a>
+                <a class="phone-number" href="tel:79811620170"
+                  >+7(981) 162 01 70</a
+                >
               </div>
             </div>
           </div>
@@ -75,16 +79,16 @@
               <div>
                 <h2>Главное меню</h2>
                 <ul>
-                  <li><a href="">Главная</a></li>
+                  <li><a href="./">Главная</a></li>
                   <li><a href="">Партнерам</a></li>
-                  <li><a href="">Разработка сайтов</a></li>
+                  <li><a href="./webdev.html">Разработка сайтов</a></li>
                   <li><a href="">Дизайн & брендбук</a></li>
-                  <li><a href="">Вопрос-ответ</a></li>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./Questions.html">Вопрос-ответ</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
               </div>
               <div>
@@ -138,11 +142,11 @@
                 />
                 <a href="" class="online-brief-link">Онлайн БРИФ</a>
                 <ul>
-                  <li><a href="">Портфолио</a></li>
-                  <li><a href="">Услуги</a></li>
-                  <li><a href="">Цены</a></li>
-                  <li><a href="">О нас</a></li>
-                  <li><a href="">Контакты</a></li>
+                  <li><a href="./index.html#portfolio">Портфолио</a></li>
+                  <li><a href="./services.html">Услуги</a></li>
+                  <li><a href="./webdev.html#price">Цены</a></li>
+                  <li><a href="./Company.html">О нас</a></li>
+                  <li><a href="./Contacts.html">Контакты</a></li>
                 </ul>
                 <div class="faq">
                   <div onclick="toggleMenuMobile(this)" class="question">
@@ -163,15 +167,11 @@
                   </div>
                   <div onclick="toggleMenuMobile(this)" class="answer">
                     <ul>
-                      <li><a href="">Главная</a></li>
+                      <li><a href="./">Главная</a></li>
                       <li><a href="">Партнерам</a></li>
-                      <li>
-                        <a href="">Разработка сайтов</a>
-                      </li>
-                      <li>
-                        <a href="">Дизайн & брендбук</a>
-                      </li>
-                      <li><a href="">Вопрос-ответ</a></li>
+                      <li><a href="./webdev.html">Разработка сайтов</a></li>
+                      <li><a href="">Дизайн & брендбук</a></li>
+                      <li><a href="./Questions.html">Вопрос-ответ</a></li>
                     </ul>
                   </div>
                 </div>
@@ -265,8 +265,10 @@
               </div>
               <div class="menu-bottom">
                 <div class="menu-mail-number">
-                  <a href="">martensonsvetlana@ya.ru</a>
-                  <a href="">+7(981) 162 01 70</a>
+                  <a href="mailto:martensonsvetlana@ya.ru"
+                    >martensonsvetlana@ya.ru</a
+                  >
+                  <a href="tel:79811620170">+7(981) 162 01 70</a>
                 </div>
                 <div class="flex-between">
                   <a href="">WhatsApp</a>
@@ -285,11 +287,36 @@
         <button class="closeModal">x</button>
         <p>Заполните форму</p>
         <p>Укажите, пожалуйста, ваши контакты для связи</p>
-        <form action="">
-          <input placeholder="Ваше имя" type="text" class="text-inputs" />
-          <input placeholder="Почта" type="email" class="text-inputs" />
-          <input placeholder="Телефон" type="tel" class="text-inputs" />
-          <select name="project-type">
+        <form action="https://api.web3forms.com/submit" method="post">
+          <input
+            type="hidden"
+            name="access_key"
+            value="21b95315-1f90-45a7-a857-f940bc2db60c"
+          />
+          <input
+            type="hidden"
+            name="redirect"
+            value="http://127.0.0.1:5500/thanks.html"
+          />
+          <input
+            placeholder="Ваше имя"
+            name="Имя"
+            type="text"
+            class="text-inputs"
+          />
+          <input
+            placeholder="Почта"
+            type="email"
+            class="text-inputs"
+            name="Почта"
+          />
+          <input
+            placeholder="Телефон"
+            type="tel"
+            class="text-inputs"
+            name="Телефон"
+          />
+          <select name="Тип проекта">
             <option default selected>Тип проекта</option>
             <option>Разработка сайта</option>
             <option>Редизайн</option>
@@ -299,23 +326,47 @@
           </select>
           <p>Какой способ связи вам подходит?</p>
           <label class="contact-platform-input" for="Telegram">
-            <input value="Telegram" id="Telegram" type="checkbox" />
+            <input
+              name="Удобная платформа для связи"
+              value="Telegram"
+              id="Telegram"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             Telegram
           </label>
           <label class="contact-platform-input" for="WhatsApp">
-            <input value="WhatsApp" id="WhatsApp" type="checkbox" />
+            <input
+              name="Удобная платформа для связи"
+              value="WhatsApp"
+              id="WhatsApp"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             WhatsApp
           </label>
           <label class="contact-platform-input" for="E-mail">
-            <input value="E-mail" id="E-mail" type="checkbox" />
+            <input
+              name="Удобная платформа для связи"
+              value="E-mail"
+              id="E-mail"
+              type="checkbox"
+            />
             <span class="checkmark"></span>
             E-mail
           </label>
-          <button class="accent-button">Отправить</button>
+          <button type="submit" class="accent-button">Отправить</button>
         </form>
       </div>
+    </div>
+
+    <div class="brief-modal">
+      <div class="brief-popup">
+        <button class="closeBriefModal">x</button>
+        <a href="./LogoBrief.html">Бриф на логотип/фирстиль -></a>
+        <a href="">Бриф на сайт -> (пока никуда не ведёт)</a>
+      </div>
+      
     </div>
 
     <section class="container-for-cover cover">
@@ -498,14 +549,38 @@
         </ul>
       </div>
       <div class="portfolio-container-dev">
-        <img src="./assets/img/portfolio-dev/1.png" alt="" />
-        <img src="./assets/img/portfolio-dev/4.png" alt="" />
-        <img src="./assets/img/portfolio-dev/7.png" alt="" />
-        <img src="./assets/img/portfolio-dev/2.png" alt="" />
-        <img src="./assets/img/portfolio-dev/5.png" alt="" />
-        <img src="./assets/img/portfolio-dev/3.png" alt="" />
-        <img src="./assets/img/portfolio-dev/6.png" alt="" />
-        <img src="./assets/img/portfolio-dev/8.png" alt="" />
+        <img
+          src="./assets/img/portfolio-dev/1.png"
+          alt="Веб сайт Cookteam про кухни "
+        />
+        <img
+          src="./assets/img/portfolio-dev/4.png"
+          alt="Веб сайт Updrive про велосипеды "
+        />
+        <img
+          src="./assets/img/portfolio-dev/7.png"
+          alt="Вебсайт про косметику для волос"
+        />
+        <img
+          src="./assets/img/portfolio-dev/2.png"
+          alt="Админ панель на веб сайте"
+        />
+        <img
+          src="./assets/img/portfolio-dev/5.png"
+          alt="Веб сайт Digital kids"
+        />
+        <img
+          src="./assets/img/portfolio-dev/3.png"
+          alt="Веб сайт про недвижимость"
+        />
+        <img
+          src="./assets/img/portfolio-dev/6.png"
+          alt="Веб сайт про доставку еды"
+        />
+        <img
+          src="./assets/img/portfolio-dev/8.png"
+          alt="Веб сайт про дизайн интерьера"
+        />
       </div>
       <div id="watch-more-container">
         <a id="watch-more-link" href=""
@@ -547,7 +622,7 @@
       <img src="./assets/img/pinkbgBG.png" alt="" />
       <img class="statue-purple-bg" src="./assets/img/pinkbg.png" alt="" />
       <div class="front-layer">
-        <img src="./assets/img/statue.png" alt="" />
+        <img src="./assets/img/statue.png" alt="Статуя, бюст женщины" />
       </div>
       <div class="back-layer">
         <img src="./assets/img/statue-square.png" alt="" />
@@ -571,7 +646,7 @@
               >для максимальной производительности</span
             >
           </p>
-          <img src="./assets/img/UIimg.png" alt="" />
+          <img src="./assets/img/UIimg.png" alt="Статуя женщины в пышном платье" />
         </div>
         <ul class="UI-list fsz-1-2rem">
           <li>
@@ -671,7 +746,7 @@
         </div>
       </div>
       <div class="easy-to-manage flex-between">
-        <ol class="dev-stages-list">
+        <ol class="dev-stages-list ">
           <li>
             <h3 class="dev-stage-h3" onclick="toggleDevStage(this)">
               Аналитика, заполнение брифа
@@ -783,7 +858,20 @@
             </div>
           </div>
         </div>
-      </div>
+        <!-- <div class="dev" id="outer-bg-img-container">
+          <div class="inner-text-block">
+            <h3>Легкость в управлении</h3>
+            <div class="dev" id="inner-bg-img-container">
+              <p>Service</p>
+              <p>
+                Любой сотрудник вашей компании сможет разобраться как
+                редактировать информацию на сайте и как добавлять новую. Вам не
+                потребуется заказывать услуги по контентной поддержке сайта
+              </p>
+            </div>
+          </div>
+        </div>
+      </div> -->
     </section>
 
     <section class="carousel">
@@ -859,56 +947,55 @@
           <h3>Front-end & back-end</h3>
           <div class="dev-icon-container">
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/bootstrap.svg" alt="" />
+              <img src="./assets/img/icons/dev/bootstrap.svg" alt="логотип bootstrap" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/gitSmall.svg" alt="" />
+              <img src="./assets/img/icons/dev/gitSmall.svg" alt="логотип git" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/HTML5CSS3.svg" alt="" />
+              <img src="./assets/img/icons/dev/HTML5CSS3.svg" alt="логотип html and css" />
             </div>
             
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/d3.svg" alt="" />
+              <img src="./assets/img/icons/dev/d3.svg" alt="логотип d3" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/ajax.svg" alt="" />
+              <img src="./assets/img/icons/dev/ajax.svg" alt="логотип ajax" />
             </div>
 
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/gulp.svg" alt="" />
+              <img src="./assets/img/icons/dev/gulp.svg" alt="логотип gulp" />
             </div>
             
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/json-kopiya.svg" alt="" />
+              <img src="./assets/img/icons/dev/json-kopiya.svg" alt="логотип json" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/nodejs.svg" alt="" />
+              <img src="./assets/img/icons/dev/nodejs.svg" alt="логотип nodejs" />
             </div>
           
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/rahael.svg" alt="" />
+              <img src="./assets/img/icons/dev/rahael.svg" alt="логотип rahael" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/react.svg" alt="" />
+              <img src="./assets/img/icons/dev/react.svg" alt="логотип react" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/saas.svg" alt="" />
+              <img src="./assets/img/icons/dev/saas.svg" alt="логотип saas" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/webgl.svg" alt="" />
+              <img src="./assets/img/icons/dev/webgl.svg" alt="логотип webgl" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/xml.svg" alt="" />
+              <img src="./assets/img/icons/dev/xml.svg" alt="логотип xml" />
             </div>
 
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/JOOMLA.svg" alt="" />
+              <img src="./assets/img/icons/dev/JOOMLA.svg" alt="логотип joomla" />
             </div>
             <div class="web-icon dev-icon">
-              <img src="./assets/img/icons/dev/python.svg" alt="" />
+              <img src="./assets/img/icons/dev/python.svg" alt="логотип python" />
             </div>
-           
           </div>
         </label>
 
@@ -917,25 +1004,25 @@
           <h3>UI/UX design</h3>
           <div class="icon-container">
             <div class="web-icon">
-              <img src="./assets/img/icons/UIUX/Ps.svg" alt="" />
+              <img src="./assets/img/icons/UIUX/Ps.svg" alt="логотип Photoshop" />
             </div>
             <div class="web-icon">
-              <img src="./assets/img/icons/UIUX/Ai.svg" alt="" />
+              <img src="./assets/img/icons/UIUX/Ai.svg" alt="логотип Adobe Illustrator" />
             </div>
             <div class="web-icon">
-              <img src="./assets/img/icons/UIUX/Fig.svg" alt="" />
+              <img src="./assets/img/icons/UIUX/Fig.svg" alt="логотип Figma" />
             </div>
             <div class="web-icon">
-              <img src="./assets/img/icons/UIUX/Ae.svg" alt="" />
+              <img src="./assets/img/icons/UIUX/Ae.svg" alt="логотип After Effeects" />
             </div>
             <div class="web-icon">
-              <img src="./assets/img/icons/UIUX/Corel Draw.svg" alt="" />
+              <img src="./assets/img/icons/UIUX/Corel Draw.svg" alt="логотип Corel Draw" />
             </div>
           </div>
         </label>
       </div>
     </section>
-    <section class="container price">
+    <section id="price" class="container price">
       <div class="price-left-side">
         <h2 class="fsz-2rem">
           <span class="fsz-3rem">Цены по</span><br />WEB-разработке
@@ -1053,14 +1140,35 @@
           сотрудничество<br />
           <span class="fsz-3rem">прямо сейчас</span>
         </h2>
-        <div class="lets-work-inp-container fsz-1-2rem">
+        <form
+          method="post"
+          action="https://api.web3forms.com/submit"
+          class="lets-work-inp-container fsz-1-2rem"
+        >
           <input
-            id="lets-work-input"
-            type="text"
-            placeholder="Почта или телефон"
+            type="hidden"
+            name="access_key"
+            value="21b95315-1f90-45a7-a857-f940bc2db60c"
           />
-          <button>отправить</button>
-        </div>
+          <input
+            type="hidden"
+            name="redirect"
+            value="http://127.0.0.1:5500/thanks.html"
+          />
+          <input name="Контакт" id="lets-work-input" type="text" readonly />
+          <input name="Контакт" id="lets-work-input-phone" type="text" />
+          <input name="Контакт" id="lets-work-input-mail" type="text" />
+          <label for="lets-work-input" class="mail-or-phone"
+            ><span onclick="setMailInput(this)" class="input-select-mail"
+              >Почта</span
+            >
+            <span class="ili">или</span>
+            <span onclick="setNumInput(this)" class="input-select-num"
+              >телефон</span
+            ></label
+          >
+          <button type="submit">отправить</button>
+        </form>
         <div class="flex-between">
           <div class="flex-between">
             <svg
@@ -1076,7 +1184,7 @@
                 stroke="#977AD2"
               />
             </svg>
-            <a class="lets-work-a" href="">+7(981)162-01-70</a>
+            <a class="lets-work-a" href="tel:79811620170">+7(981)162-01-70</a>
           </div>
           <div class="flex-between">
             <svg
@@ -1099,7 +1207,7 @@
                 fill="#AA7AD2"
               />
             </svg>
-            <a class="lets-work-a" href="">martenson@bk.ru</a>
+            <a class="lets-work-a" href="mailto:martenson@bk.ru">martenson@bk.ru</a>
           </div>
         </div>
         <!-- <label for="lets-work-input">Почта или телефон</label> -->
@@ -1113,19 +1221,20 @@
             <img src="./assets/img/LogoSM.svg" alt="" />
             <p>Креативная студия<br />Светланы Мартенсон</p>
           </div>
+
           <ul>
-            <li><a href="">Главная </a></li>
+            <li><a href="./">Главная</a></li>
             <li><a href="">Партнерам</a></li>
-            <li><a href="">Разработка сайтов</a></li>
+            <li><a href="./webdev.html">Разработка сайтов</a></li>
             <li><a href="">Дизайн & брендбук</a></li>
             <li><a href="./Questions.html">Вопрос-ответ</a></li>
           </ul>
           <ul>
-            <li><a href="">Портфолио </a></li>
-            <li><a href="">Услуги</a></li>
-            <li><a href="">Цены</a></li>
-            <li><a href="">О нас</a></li>
-            <li><a href="">Контакты</a></li>
+            <li><a href="./index.html#portfolio">Портфолио</a></li>
+            <li><a href="./services.html">Услуги</a></li>
+            <li><a href="./webdev.html#price">Цены</a></li>
+            <li><a href="./Company.html">О нас</a></li>
+            <li><a href="./Contacts.html">Контакты</a></li>
           </ul>
           <!-- <div class="footer-button-container">
 						<button class="online-brief-button">Онлайн БРИФ</button>
@@ -1133,23 +1242,22 @@
           <div class="footer-contacts">
             <div class="brief-button-container">
               <button class="online-brief-button">Онлайн БРИФ</button>
-              <div class="mail-icon">
-                <i class="fa-regular fa-envelope"></i>
-              </div>
+              <a class="mail-icon" href="mailto:martenson@bk.ru">
+                <i class="fa-regular fa-envelope"> </i>
+              </a>
             </div>
             <div class="phone-and-icons">
               <div>
                 <i class="fa-brands fa-whatsapp"></i>
                 <i class="fa-brands fa-telegram"></i>
               </div>
-              <a href="">+7(981) 162 01 70</a>
+              <a href="tel:79811620170">+7(981) 162 01 70</a>
             </div>
           </div>
         </div>
       </div>
       <div class="darker-footer">
         <div class="footer-bottom-half flex-between content">
-          <a href="" class="footer-phone-link fsz-2rem">+7(981) 162 01 70</a>
           <p>Сopyright © All rights reserved 2007-2024</p>
           <ul class="flex-between">
             <li><a class="WhatsAppFooter" href="">WhatsApp</a></li>
