@@ -18,6 +18,7 @@
     />
     <script src="./script.js" defer></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./vanilla-masker.js"></script>
   </head>
   <body>
     <script src="./wow.js"></script>
@@ -369,7 +370,7 @@
 
     <section class="container company-cover wow">
       <img
-        src="./assets/img/lets-work.png	"
+        src="./assets/img/lets-work.webp	"
         alt="Статуя женщины с волнистыми воздушными волосами"
       />
 
@@ -624,7 +625,7 @@
       <img src="./assets/img/company-bg.png" alt="" />
       <img
         class="company-statue"
-        src="./assets/img/company-statue.png"
+        src="./assets/img/company-statue.webp"
         alt="Статуя женщины с витающими в воздухе волосами"
       />
       <p>Оригинальность в решении сложных задач</p>
@@ -684,7 +685,7 @@
             выделиться среди конкурентов
           </p>
           <img
-            src="./assets/img/digi-design.png"
+            src="./assets/img/digi-design.webp"
             alt="Силуэт женщины в полупрозрачной ткани"
           />
         </div>
@@ -874,7 +875,7 @@
         </div>
         <!-- <label for="lets-work-input">Почта или телефон</label> -->
       </div>
-      <img src="./assets/img/lets-work.png	" alt="" />
+      <img src="./assets/img/lets-work.webp	" alt="" />
     </section>
     <footer class="wow">
       <div>
@@ -930,5 +931,10 @@
         </div>
       </div>
     </footer>
+    <script>
+      VMasker(document.querySelector("#lets-work-input-phone")).maskPattern(
+        "+9(999) 999-99-99"
+      );
+    </script>
   </body>
 </html>

@@ -1089,7 +1089,7 @@ h1 {
 }
 
 #inner-bg-img-container {
-  background: url(./assets/img/team-pink-bg.png);
+  background: url(./assets/img/team-pink-bg.webp);
   /* outline: solid 1px crimson; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -1110,7 +1110,7 @@ h1 {
   /* padding-bottom: 3em; */
   /* outline: solid 1px coral; */
   width: 45%;
-  background-image: url(./assets/img/team-white-bg.png);
+  background-image: url(./assets/img/team-white-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100%;

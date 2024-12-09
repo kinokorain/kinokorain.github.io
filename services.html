@@ -18,6 +18,7 @@
     />
     <script src="./script.js" defer></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./vanilla-masker.js"></script>
   </head>
   <body>
     <script src="./wow.js"></script>
@@ -801,7 +802,7 @@
         </div>
         <!-- <label for="lets-work-input">Почта или телефон</label> -->
       </div>
-      <img src="./assets/img/lets-work.png	" alt="" />
+      <img src="./assets/img/lets-work.webp	" alt="" />
     </section>
     <footer class="wow">
       <div>
@@ -857,5 +858,10 @@
         </div>
       </div>
     </footer>
+    <script>
+      VMasker(document.querySelector("#lets-work-input-phone")).maskPattern(
+        "+9(999) 999-99-99"
+      );
+    </script>
   </body>
 </html>
