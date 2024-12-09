@@ -1389,6 +1389,7 @@ h1 {
 
 .lets-work-a {
   transition: all 0.3s;
+  white-space: nowrap;
 }
 
 .lets-work-a:hover {
@@ -1576,11 +1577,11 @@ footer a:hover {
   /* min-width: 40%; */
   /* max-width: 40%; */
   width: 50%;
-  padding: 5em;
   z-index: 25;
   border-top-right-radius: 95px;
-  padding: 2em;
+  padding: 5em;
   position: relative;
+  padding-block: 7em;
 }
 
 .brief-popup .closeBriefModal {
@@ -1591,6 +1592,14 @@ footer a:hover {
 
 .brief-popup a {
   display: block;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.brief-popup svg {
+  height: 100%;
 }
 
 .form {
@@ -3340,7 +3349,7 @@ select {
 }
 
 #dev-outer-bg-img {
-  background-image: url(./assets/img/dev-stages-outer.png);
+  background-image: url(./assets/img/dev-stages-outer.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0%;
@@ -3351,7 +3360,7 @@ select {
 }
 
 #dev-inner-bg-img {
-  background: url(./assets/img/dev-stages-inner.png);
+  background: url(./assets/img/dev-stages-inner.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0%;
@@ -3876,12 +3885,6 @@ select {
 }
 
 @media (max-width: 768px) {
-  .services-text {
-    /* outline: solid crimson; */
-    flex-direction: column;
-    align-items: center;
-  }
-
   .services-text p {
     width: 100%;
   }
@@ -4085,6 +4088,20 @@ select {
   .contacts .digital-creator {
     left: 50%;
   }
+
+  .services-text p {
+    width: 100%;
+  }
+
+  .services-text {
+    /* outline: solid crimson; */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .services-text > * {
+    width: 100%;
+  }
 }
 
 @media (max-width: 475px) {
@@ -4121,11 +4138,23 @@ select {
     margin-left: 0;
     align-self: flex-start;
   }
+  .question-page .digital-creator {
+    /* left: 50%; */
+    top: 15%;
+    /* font-size: 5rem; */
+  }
 }
 
 @media (max-width: 640px) {
   .question-page .digital-creator {
     left: 50%;
+    /* font-size: 5rem; */
+  }
+}
+
+@media (max-width: 475px) {
+  .question-page .digital-creator {
+    font-size: 5rem;
   }
 }
 
