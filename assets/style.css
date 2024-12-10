@@ -254,21 +254,20 @@ legend {
 
 @font-face {
   font-family: "Gilroy Regular";
-  src: url("/assets/fonts/Gilroy-Regular.eot");
-  src: url("/assets/fonts/Gilroy-Regular.eot?#iefix")
-      format("embedded-opentype"),
-    url("./assets/fonts/Gilroy-Regular.woff") format("woff"),
-    url("./assets/fonts/Gilroy-Regular.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Regular.eot");
+  src: url("/fonts/Gilroy-Regular.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Gilroy-Regular.woff") format("woff"),
+    url("./fonts/Gilroy-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Gilroy Black";
-  src: url("/assets/fonts/Gilroy-Black.eot");
-  src: url("/assets/fonts/Gilroy-Black.eot?#iefix") format("embedded-opentype"),
-    url("./assets/fonts/Gilroy-Black.woff") format("woff"),
-    url("./assets/fonts/Gilroy-Black.ttf") format("truetype");
+  src: url("/fonts/Gilroy-Black.eot");
+  src: url("/fonts/Gilroy-Black.eot?#iefix") format("embedded-opentype"),
+    url("./fonts/Gilroy-Black.woff") format("woff"),
+    url("./fonts/Gilroy-Black.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -1089,7 +1088,7 @@ h1 {
 }
 
 #inner-bg-img-container {
-  background: url(./assets/img/team-pink-bg.webp);
+  background: url(./img/team-pink-bg.webp);
   /* outline: solid 1px crimson; */
   background-size: cover;
   background-repeat: no-repeat;
@@ -1110,7 +1109,7 @@ h1 {
   /* padding-bottom: 3em; */
   /* outline: solid 1px coral; */
   width: 45%;
-  background-image: url(./assets/img/team-white-bg.webp);
+  background-image: url(./img/team-white-bg.webp);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 100%;
@@ -1653,7 +1652,7 @@ select {
 .form select {
   background-color: white;
   appearance: none;
-  background-image: url("./assets/img/select-arrow.svg");
+  background-image: url("./img/select-arrow.svg");
   background-repeat: no-repeat;
   background-position: right 0.7rem top 50%;
   background-size: 0.8rem auto;
@@ -3349,7 +3348,7 @@ select {
 }
 
 #dev-outer-bg-img {
-  background-image: url(./assets/img/dev-stages-outer.webp);
+  background-image: url("./img/dev-stages-outer.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0%;
@@ -3360,7 +3359,7 @@ select {
 }
 
 #dev-inner-bg-img {
-  background: url(./assets/img/dev-stages-inner.webp);
+  background: url("./img/dev-stages-inner.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 0%;

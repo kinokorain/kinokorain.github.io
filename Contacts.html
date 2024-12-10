@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css" />
+    <title>Креативная студия Светланы Мартенсон</title>
+    <link rel="stylesheet" href="./assets/style.css" />
     <script
       src="https://kit.fontawesome.com/a7b0e735e6.js"
       crossorigin="anonymous"
@@ -17,6 +17,7 @@
     />
     <script src="./script.js" defer></script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="./vanilla-masker.js"></script>
   </head>
   <body>
     <div class="for-gray-bg"></div>
@@ -51,7 +52,9 @@
             </nav>
             <div class="header-brief-container flex-between">
               <div class="brief-button-container">
-                <button class="online-brief-button">Онлайн БРИФ</button>
+                <button class="online-brief-button openBriefModal">
+                  Онлайн БРИФ
+                </button>
                 <a class="mail-icon" href="mailto:martenson@bk.ru">
                   <i class="fa-regular fa-envelope"> </i>
                 </a>
@@ -357,6 +360,50 @@
           </label>
           <button type="submit" class="accent-button">Отправить</button>
         </form>
+      </div>
+    </div>
+    <div class="brief-modal">
+      <div class="brief-popup">
+        <button class="closeBriefModal">
+          <svg
+            width="24"
+            height="23"
+            viewBox="0 0 24 23"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect
+              x="2.36426"
+              width="30.4408"
+              height="2.08909"
+              transform="rotate(45 2.36426 0)"
+              fill="#71727A"
+            />
+            <rect
+              x="0.887207"
+              y="21.5249"
+              width="30.4408"
+              height="2.08909"
+              transform="rotate(-45 0.887207 21.5249)"
+              fill="#71727A"
+            />
+          </svg>
+        </button>
+        <a href="./LogoBrief.html"
+          >Бриф на логотип/фирстиль
+          <svg
+            width="19"
+            height="8"
+            viewBox="0 0 19 8"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M18.2408 4.35355C18.436 4.15829 18.436 3.84171 18.2408 3.64645L15.0588 0.464466C14.8635 0.269204 14.5469 0.269204 14.3517 0.464466C14.1564 0.659728 14.1564 0.976311 14.3517 1.17157L17.1801 4L14.3517 6.82843C14.1564 7.02369 14.1564 7.34027 14.3517 7.53553C14.5469 7.7308 14.8635 7.7308 15.0588 7.53553L18.2408 4.35355ZM0.887207 4.5H17.8872V3.5H0.887207V4.5Z"
+              fill="#71727A"
+            />
+          </svg>
+        </a>
       </div>
     </div>
 
